@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: envoy-gateway
+  namespace: envoy
+spec:
+  releaseName: envoy-gateway
+  interval: 10m
+  targetNamespace: envoy
+  chart:
+    spec:
+      chart: gateway-helm
+      sourceRef:
+        kind: HelmRepository
+        name: envoy
+      version: 1.3.0
+  values: {}
