@@ -4,4 +4,4 @@ metadata:
   name: envoy
 resources:
   - ./namespace.yaml
-  - ./envoy-gateway/kustomization.yaml
+  - ./envoy-gateway/ks.yaml
