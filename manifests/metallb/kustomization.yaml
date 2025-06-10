@@ -5,3 +5,4 @@ resources:
   - ./bitnami-helm.yaml
   - ./helmrelease.yaml
   - ./ip-pool.yaml
+  - ./advertisement.yaml
