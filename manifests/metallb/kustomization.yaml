@@ -4,3 +4,4 @@ resources:
   - ./namespace.yaml
   - ./bitnami-helm.yaml
   - ./helmrelease.yaml
+  - ./ip-pool.yaml
