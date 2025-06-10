@@ -6,7 +6,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  dependsOn: ["gateways"]
+  dependsOn:
+    - name: gateways
   sourceRef:
     kind: GitRepository
     name: flux-system
