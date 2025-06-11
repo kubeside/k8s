@@ -6,3 +6,8 @@ resources:
   - ./helmrelease.yaml
   - ./ip-pool.yaml
   - ./advertisement.yaml
+patches:
+  - path: role-override.yaml
+    target:
+      kind: Role 
+      name: metallb-controller
