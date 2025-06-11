@@ -6,7 +6,7 @@ metadata:
 spec:
   releaseName: envoy-gateway
   interval: 10m
-  targetNamespace: envoy
+  targetNamespace: envoy-system
   chart:
     spec:
       chart: gateway-helm
