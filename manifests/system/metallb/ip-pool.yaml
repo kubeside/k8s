@@ -1,11 +1,8 @@
-apiVersion: v1
-kind: ConfigMap
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
 metadata:
+  name: load-balancer
   namespace: metallb-system
-  name: config
-data:
-  config: |
-    address-pools:
-    - name: load-balancer
-      addresses:
-        - 10.4.0.5/32
+spec:
+  addresses:
+    - 10.4.0.5/32
