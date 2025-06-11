@@ -1,9 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: bitnami-helm
+  name: metallb
   namespace: metallb 
 spec:
-  type: "oci"
   interval: 5m0s
-  url: oci://docker.io/bitnamicharts
+  url: https://metallb.github.io/metallb
