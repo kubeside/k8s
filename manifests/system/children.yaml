@@ -3,7 +3,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: envoy-system
-  namespace: systems
+  namespace: flux-system
 spec:
   interval: 1m0s
   dependsOn:
@@ -20,7 +20,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: gateways-system
-  namespace: systems
+  namespace: flux-system
 spec:
   interval: 1m0s
   dependsOn: []
@@ -36,7 +36,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: metallb-system
-  namespace: systems
+  namespace: flux-system
 spec:
   interval: 1m0s
   dependsOn:
@@ -53,7 +53,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: ip-pools-system
-  namespace: systems
+  namespace: flux-system
 spec:
   interval: 1m0s
   dependsOn: []
