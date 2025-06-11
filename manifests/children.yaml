@@ -2,24 +2,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: envoy
-  namespace: flux-system
-spec:
-  interval: 1m0s
-  dependsOn:
-    - name: gateways
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./manifests/envoy
-  prune: true
-  wait: true
-  timeout: 5m0s
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: gateways
+  name: system
   namespace: flux-system
 spec:
   interval: 1m0s
@@ -27,23 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./manifests/gateways
-  prune: true
-  wait: true
-  timeout: 5m0s
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: metallb
-  namespace: flux-system
-spec:
-  interval: 1m0s
-  dependsOn: []
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./manifests/metallb
+  path: ./manifests/system
   prune: true
   wait: true
   timeout: 5m0s
