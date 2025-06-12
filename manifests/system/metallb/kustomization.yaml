@@ -4,3 +4,4 @@ resources:
   - ./namespace.yaml
   - ./advertisement.yaml
   - ./ip-pool.yaml
+  - ./instance.yaml
