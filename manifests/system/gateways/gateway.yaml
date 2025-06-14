@@ -13,4 +13,4 @@ spec:
         kinds:
           - kind: HTTPRoute
         namespaces:
-          from: all
+          from: All
