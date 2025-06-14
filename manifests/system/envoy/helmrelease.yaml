@@ -9,7 +9,7 @@ spec:
   targetNamespace: envoy-system
   chart:
     spec:
-      chart: envoy-gateway-helm
+      chart: gateway-helm
       sourceRef:
         kind: HelmRepository
         name: envoy
