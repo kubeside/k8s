@@ -24,7 +24,7 @@ metadata:
 spec:
   interval: 1m0s
   dependsOn:
-    - name: gateway-api
+    - name: gateway-api-system
   sourceRef:
     kind: GitRepository
     name: flux-system
