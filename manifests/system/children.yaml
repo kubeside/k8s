@@ -23,11 +23,28 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  dependsOn: []
+  dependsOn:
+    - name: gateway-api
   sourceRef:
     kind: GitRepository
     name: flux-system
   path: ./manifests/system/gateways
+  prune: true
+  wait: true
+  timeout: 5m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: gateway-api
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn: []
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./manifests/system/gateway-api
   prune: true
   wait: true
   timeout: 5m0s
