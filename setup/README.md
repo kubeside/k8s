@@ -40,7 +40,11 @@ cilium install \
     --set cgroup.autoMount.enabled=false \
     --set cgroup.hostRoot=/sys/fs/cgroup \
     --set k8sServiceHost=localhost \
-    --set k8sServicePort=7445
+    --set k8sServicePort=7445 \
+    --set k8sServicePort=7445 \
+    --set enable-l2-announcements=true \
+    --set k8s-client-qps=33 \
+    --set k8s-client-burst=100
 ```
 ## Flux
 Create a deploy key to this repo and use this command flux to the repo
