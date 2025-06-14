@@ -13,4 +13,4 @@ spec:
         kinds:
           - kind: HTTPRoute
         namespaces:
-          selector: {}
+          from: all
