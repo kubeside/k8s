@@ -1,0 +1,7 @@
+apiVersion: cilium.io/v2alpha1
+kind: CiliumLoadBalancerIPPool
+metadata:
+  name: reverse-proxy
+spec:
+  blocks:
+  - cidr: 10.4.0.5/32
