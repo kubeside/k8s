@@ -17,12 +17,24 @@ spec:
         - name: iso-cache
           image: ghcr.io/kubeside/images/http-cache:2d1db1f97952ce9fa44e949e601e7f04c1c14306
           ports:
-            - containerPort: 80
+            - name: http
+              containerPort: 80
           volumeMounts:
             - name: config
               mountPath: /opt/http-cache/config.json
               subPath: config.json
               readOnly: true
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          startupProbe:
+            httpGet:
+              path: /
+              port: http
+            failureThreshold: 30
+            periodSeconds: 60
+
       volumes:
         - name: config
           configMap:
