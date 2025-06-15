@@ -6,6 +6,7 @@ metadata:
 spec:
   parentRefs:
     - name: http-gateway
+      namespace: gateways-system
   hostnames:
     - nginx-demo.k8s.imavgs.no
   rules:
