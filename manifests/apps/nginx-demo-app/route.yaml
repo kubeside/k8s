@@ -4,6 +4,8 @@ metadata:
   name: nginx-demo-app
   namespace: nginx-demo-app
 spec:
+  parentRefs:
+    - name: http-gateway
   hostnames:
     - nginx-demo.k8s.imavgs.no
   rules:
