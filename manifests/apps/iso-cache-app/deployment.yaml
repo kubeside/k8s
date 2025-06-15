@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: iso-cache
-          image: "ghcr.io/kubeside/images/http-cache:6db030fac54c3a5bc969952efc08a41e22719aa0"
+          image: ghcr.io/kubeside/images/http-cache:dee04725ba1513d8c308ea8598fd7b6675d44288
           ports:
             - containerPort: 80
           volumeMounts:
