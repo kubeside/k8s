@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iso-cache-app
+  namespace: iso-cache-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iso-cache-app
+  template:
+    metadata:
+      labels:
+        app: iso-cache-app
+    spec:
+      containers:
+        - name: iso-cache
+          image: ghcr.io/kubeside/images/http-cache:247a7506de47acdfdf61bd4145da7a25f52b24e0
+          ports:
+            - containerPort: 80
+
