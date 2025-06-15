@@ -20,9 +20,14 @@ spec:
             - containerPort: 80
           volumeMounts:
             - name: config
-              configMap:
-                name: config
-                items:
-                  - key: config.json
-                    path: /opt/http-cache/config.json
+              mountPath: /opt/http-cache/config.json
+              subPath: config.json
+              readOnly: true
+        volumes:
+          - name: config
+            configMap:
+              name: config
+              items:
+                - key: config.json
+                  path: config.json
 
