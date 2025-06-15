@@ -24,6 +24,8 @@ spec:
               mountPath: /opt/http-cache/config.json
               subPath: config.json
               readOnly: true
+            - name: persistent-state
+              mountPath: /opt/http-cache/persistent-state
           livenessProbe:
             httpGet:
               path: /
@@ -42,4 +44,7 @@ spec:
             items:
               - key: config.json
                 path: config.json
+        - name: persistent-state
+          persistentVolumeClaim:
+            claimName: persistent-state
 
