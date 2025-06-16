@@ -4,25 +4,16 @@ metadata:
   name: config
   namespace: iso-cache-app
 data:
-  # config.json: |
-  #   {
-  #     "cache_targets": [
-  #       {
-  #         "url": "https://releases.ubuntu.com/24.04/ubuntu-24.04.2-desktop-amd64.iso",
-  #         "file_name": "ubuntu-24.04.2-desktop-amd64.iso"
-  #       },
-  #       {
-  #         "url": "https://releases.ubuntu.com/20.04/ubuntu-20.04.6-desktop-amd64.iso",
-  #         "file_name": "ubuntu-20.04.6-desktop-amd64.iso"
-  #       }
-  #     ]
-  #   }
   config.json: |
     {
       "cache_targets": [
         {
-          "url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fb1694534.smushcdn.com%2F1694534%2Fwp-content%2Fuploads%2F2021%2F06%2F7-1017x1024.png%3Flossy%3D1%26strip%3D1%26webp%3D1&f=1&nofb=1&ipt=e723d5ffe4e28471250cbd52d052425267db330f01b659f5874e515638b1cb6a",
-          "file_name": "js.png"
+          "url": "https://releases.ubuntu.com/24.04/ubuntu-24.04.2-desktop-amd64.iso",
+          "file_name": "ubuntu-24.04.2-desktop-amd64.iso"
+        },
+        {
+          "url": "https://releases.ubuntu.com/20.04/ubuntu-20.04.6-desktop-amd64.iso",
+          "file_name": "ubuntu-20.04.6-desktop-amd64.iso"
         }
       ]
     }
