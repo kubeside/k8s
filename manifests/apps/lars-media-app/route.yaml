@@ -1,0 +1,15 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: lars-media-app
+  namespace: lars-media-app
+spec:
+  parentRefs:
+    - name: http-gateway
+      namespace: gateways-system
+  hostnames:
+    - lars-media.k8s.imavgs.no
+  rules:
+    - backendRefs:
+        - name: lars-media-app
+          port: 80
