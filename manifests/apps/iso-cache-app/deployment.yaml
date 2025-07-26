@@ -48,9 +48,9 @@ spec:
             items:
               - key: config.json
                 path: config.json
-        # - name: persistent-cache
-        #   persistentVolumeClaim:
-        #     claimName: persistent-cache
+        - name: persistent-cache
+          persistentVolumeClaim:
+            claimName: persistent-cache
         - name: ram-cache
           emptyDir:
             sizeLimit: 10Gi
