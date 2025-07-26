@@ -26,8 +26,8 @@ spec:
               mountPath: /opt/http-cache/config.json
               subPath: config.json
               readOnly: true
-            # - name: persistent-cache
-            #   mountPath: /opt/http-cache/persistent-cache
+            - name: persistent-cache
+              mountPath: /opt/http-cache/persistent-cache
             - name: ram-cache
               mountPath: /opt/http-cache/ram-cache
           livenessProbe:
@@ -55,4 +55,3 @@ spec:
           emptyDir:
             sizeLimit: 10Gi
             medium: Memory
-
