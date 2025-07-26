@@ -7,7 +7,12 @@ First, you will need a few CLI tools:
 
 ## Talos
 ### Creating a talos config
-TODO
+First you need to create a base config. This can be done through `talosctl gen config cube <ip>`.
+After that you will need to update a few options:
+- Disable kube proxy
+- Allow scheduling on controlplanes
+- Change the service cidr to be `10.200.0.0/16`
+- Change the pod cidr to be `10.201.0.0/16`
 
 ### Applying the config
 We currently have 1 control plane:
@@ -18,7 +23,7 @@ And no workers currently, as we run services on the controlplanes.
 Use this command to apply the control plane config
 `talosctl apply-config -n <ip> -e <ip> --file controlplane.yaml`
 Use this command to apply the worker config
-`talosctl apply-config -n <ip> -e <ip> --file controlplane.yaml`
+`talosctl apply-config -n <ip> -e <ip> --file worker.yaml`
 
 After that, bootstrap every node
 `talosctl bootstrap -n <ip> -e <ip>`
