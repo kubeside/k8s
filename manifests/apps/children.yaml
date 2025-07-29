@@ -46,3 +46,23 @@ spec:
   prune: true
   wait: true
   timeout: 5m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: metro-app
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn: []
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  decryption:
+    provider: sops
+    secretRef:
+      name: cluster-key
+  path: ./manifests/apps/lars-media-app
+  prune: true
+  wait: true
+  timeout: 5m0s
