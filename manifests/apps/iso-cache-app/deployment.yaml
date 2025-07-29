@@ -4,7 +4,7 @@ metadata:
   name: iso-cache-app
   namespace: iso-cache-app
   annotations:
-    configmap.reloader.stakater.com/reload: "config"
+    configmap.reloader.stakater.com/reload: config
 spec:
   replicas: 1
   selector:
