@@ -11,5 +11,6 @@ spec:
     - fromEndpoints:
         - matchLabels:
             app.kubernetes.io/name: envoy
+            io.kubernetes.pod.namespace: envoy-system
   egress:
     - {}
