@@ -1,0 +1,22 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: network-policy
+  namespace: metro-app
+spec:
+  endpointSelector:
+    matchLabels:
+      app: metro-app
+  ingress:
+    - fromEndpoints:
+        - matchLabels:
+            app.kubernetes.io/name: envoy
+            io.kubernetes.pod.namespace: envoy-system
+  egress:
+    - toFQDNs:
+        - matchName: "pfsense.imavgs.no"
+        - matchName: "1.1.1.1"
+        - matchName: "8.8.8.8"
+      toPorts:
+        - ports:
+            - port: "443"
