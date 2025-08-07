@@ -1,0 +1,13 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: network-policy
+  namespace: nginx-demo-app
+spec:
+  endpointSelector:
+    matchLabels:
+      app: nginx-demo-app
+  ingress:
+    - {}
+  egress:
+    - {}
