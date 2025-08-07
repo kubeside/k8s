@@ -25,6 +25,9 @@ spec:
       toPorts:
         - ports:
             - port: "53"
+          rules:
+            dns:
+              - matchPattern: "*"
     - toCIDRSet:
         - cidr: 1.1.1.1/32
         - cidr: 8.8.8.8/32
