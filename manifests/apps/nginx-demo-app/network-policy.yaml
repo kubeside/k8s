@@ -8,6 +8,8 @@ spec:
     matchLabels:
       app: nginx-demo-app
   ingress:
-    - {}
+    - fromEndpoints:
+        - matchLabels:
+            app.kubernetes.io/name: envoy
   egress:
     - {}
