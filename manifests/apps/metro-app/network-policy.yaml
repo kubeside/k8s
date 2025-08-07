@@ -15,8 +15,19 @@ spec:
   egress:
     - toFQDNs:
         - matchName: "pfsense.imavgs.no"
-        - matchName: "1.1.1.1"
-        - matchName: "8.8.8.8"
+      toPorts:
+        - ports:
+            - port: "443"
+    - toEndpoints:
+        - matchLabels:
+            io.kubernetes.pod.namespace: kube-system
+            k8s-app: kube-dns
+      toPorts:
+        - ports:
+            - port: "53"
+    - fromCIDRSet:
+        - cidr: 1.1.1.1/32
+        - cidr: 8.8.8.8/32
       toPorts:
         - ports:
             - port: "443"
