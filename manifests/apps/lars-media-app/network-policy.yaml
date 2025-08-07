@@ -1,0 +1,16 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: network-policy
+  namespace: lars-media-app
+spec:
+  endpointSelector:
+    matchLabels:
+      app: lars-media-app
+  ingress:
+    - fromEndpoints:
+        - matchLabels:
+            app.kubernetes.io/name: envoy
+            io.kubernetes.pod.namespace: envoy-system
+  egress:
+    - {}
