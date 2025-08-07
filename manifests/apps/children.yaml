@@ -62,7 +62,7 @@ spec:
     provider: sops
     secretRef:
       name: cluster-key
-  path: ./manifests/apps/lars-media-app
+  path: ./manifests/apps/metro-app
   prune: true
   wait: true
   timeout: 5m0s

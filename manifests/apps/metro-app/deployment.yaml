@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: metro-app
   namespace: metro-app
+  annotations:
+    secret.reloader.stakater.com/reload: secrets
 spec:
   replicas: 1
   selector:
@@ -15,6 +17,17 @@ spec:
     spec:
       containers:
         - name: metro-app
-          image: ghcr.io/kubeside/images/metro:2973917a6299b8ccb789883f93ec1a4bf75c999b
+          image: ghcr.io/kubeside/images/metro:153efa82183e5299ca823d4214a1b397971cacce
           ports:
             - containerPort: 80
+          env:
+            - name: PFSENSE_API_URL
+              valueFrom:
+                secretKeyRef:
+                  name: secrets
+                  key: PFSENSE_API_URL
+            - name: PFSENSE_AUTH
+              valueFrom:
+                secretKeyRef:
+                  name: secrets
+                  key: PFSENSE_AUTH
