@@ -1,0 +1,19 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: network-policy
+  namespace: prometheus-system
+spec:
+  endpointSelector:
+    matchLabels:
+      app: prometheus
+  ingress:
+    - fromEndpoints:
+        - matchLabels:
+            app.kubernetes.io/name: envoy
+            io.kubernetes.pod.namespace: envoy-system
+  egress:
+    - toEndpoints:
+      - matchLabels:
+          prometheus.io/scrape: "true"
+
