@@ -5,4 +5,16 @@ metadata:
   namespace: prometheus-system
 data:
   prometheus.yml: |
-    scrape_configs: []
+    scrape_configs: 
+      - job_name: service-kubernetes
+
+        kubernetes_sd_configs:
+          - role: endpoints
+            api_server: "https://localhost:1234"
+            tls_config:
+              cert_file: valid_cert_file
+              key_file: valid_key_file
+
+            basic_auth:
+              username: "myusername"
+              password: "mysecret"
