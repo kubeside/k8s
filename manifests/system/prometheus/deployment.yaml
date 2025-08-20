@@ -17,4 +17,4 @@ spec:
         - name: prometheus
           image: prom/prometheus@sha256:71d3894cc4cc1e2f460af4a3a9016cebf8037061f5a4ee324b6414c775de55fb
           ports:
-            - containerPort: 80
+            - containerPort: 9090
