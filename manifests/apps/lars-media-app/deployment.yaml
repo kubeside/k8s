@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: media-app
-          image: ghcr.io/kubeside/images/media-app:e72507771ce7abb5c5a653baa7c44164eca44a71
+          image: ghcr.io/kubeside/images/media-app:d763087d9be91d760fe9a5312578a9eb0a3d8782
           ports:
             - containerPort: 80
