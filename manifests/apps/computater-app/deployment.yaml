@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: computater
+  namespace: computater-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: computater
+  template:
+    metadata:
+      labels:
+        app: computater
+    spec:
+      containers:
+        - name: computater
+          image: ghcr.io/kubeside/images/computater:e8a6a60ab22c65354b7751c1510a3ce1c07c4cb8
+          ports:
+            - containerPort: 80
+
