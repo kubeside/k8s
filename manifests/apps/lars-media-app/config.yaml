@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+  namespace: lars-media-app
+data:
+  config.json: |
+    {
+      "activities": [
+        {
+            "type": "video",
+            "path": "assets/a.mp4"
+        },
+        {
+            "type": "video",
+            "path": "assets/Basket.MOV"
+        },
+        {
+            "type": "image",
+            "source": "assets/Borg.png",
+            "duration": 5000
+        },
+        {
+            "type": "image",
+            "source": "assets/Lysmaling.jpg",
+            "duration": 5000
+        },
+        {
+            "type": "web",
+            "source": "https://pent.no/59.74389,10.20449",
+            "duration": 7000
+        },
+        {
+            "type": "video",
+            "path": "assets/Jernbanebroen.mp4"
+        },
+        {
+            "type": "image",
+            "source": "assets/Vinter.jpg",
+            "duration": 5000
+        }
+      ]
+    }

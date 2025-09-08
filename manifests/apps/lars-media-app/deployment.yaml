@@ -15,6 +15,25 @@ spec:
     spec:
       containers:
         - name: media-app
-          image: ghcr.io/kubeside/images/media-app:caafdc83412f0205d3969124e6dbba44417bcad3
+          image: ghcr.io/kubeside/images/media-app:76a476949e36c718954fa536ed48863f4ca693d7
           ports:
             - containerPort: 80
+          volumeMounts:
+            - name: config
+              mountPath: /var/www/html/config.json
+              subPath: config.json
+              readOnly: true
+            - name: assets
+              mountPath: /var/www/html/assets 
+              readOnly: true       
+      volumes:
+        - name: config
+          configMap:
+            name: config
+            items:
+              - key: config.json
+                path: config.json
+        - name: assets
+          persistentVolumeClaim:
+            claimName: assets
+        

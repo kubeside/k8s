@@ -6,3 +6,4 @@ resources:
   - ./service.yaml
   - ./route.yaml
   - ./network-policy.yaml
+  - ./volume-claim.yaml
