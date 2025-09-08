@@ -1,0 +1,16 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: network-policy
+  namespace: info-portal-app
+spec:
+  endpointSelector:
+    matchLabels:
+      app: info-portal
+  ingress:
+    - fromEndpoints:
+        - matchLabels:
+            app.kubernetes.io/name: envoy
+            io.kubernetes.pod.namespace: envoy-system
+  egress:
+    - {}

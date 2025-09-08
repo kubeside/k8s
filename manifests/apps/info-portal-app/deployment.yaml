@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: info-portal
+  namespace: info-portal-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: info-portal
+  template:
+    metadata:
+      labels:
+        app: info-portal
+    spec:
+      containers:
+        - name: info-portal
+          image: ghcr.io/kubeside/images/info-portal:43e1e7e8161e52b5a8d501e7ab74051bd452f1fe
+          ports:
+            - containerPort: 80
+

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: info-portal
+  namespace: info-portal-app
+spec:
+  selector:
+    app: info-portal
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
