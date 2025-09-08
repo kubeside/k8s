@@ -9,20 +9,20 @@ data:
       "activities": [
         {
             "type": "video",
-            "path": "assets/a.mp4"
+            "path": "static/a.mp4"
         },
         {
             "type": "video",
-            "path": "assets/Basket.MOV"
+            "path": "static/Basket.MOV"
         },
         {
             "type": "image",
-            "source": "assets/Borg.png",
+            "source": "static/Borg.png",
             "duration": 5000
         },
         {
             "type": "image",
-            "source": "assets/Lysmaling.jpg",
+            "source": "static/Lysmaling.jpg",
             "duration": 5000
         },
         {
@@ -32,11 +32,11 @@ data:
         },
         {
             "type": "video",
-            "path": "assets/Jernbanebroen.mp4"
+            "path": "static/Jernbanebroen.mp4"
         },
         {
             "type": "image",
-            "source": "assets/Vinter.jpg",
+            "source": "static/Vinter.jpg",
             "duration": 5000
         }
       ]

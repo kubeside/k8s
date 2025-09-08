@@ -23,8 +23,8 @@ spec:
               mountPath: /var/www/html/config.json
               subPath: config.json
               readOnly: true
-            - name: assets
-              mountPath: /var/www/html/assets 
+            - name: static
+              mountPath: /var/www/html/static 
               readOnly: true       
       volumes:
         - name: config
@@ -33,7 +33,7 @@ spec:
             items:
               - key: config.json
                 path: config.json
-        - name: assets
+        - name: static
           persistentVolumeClaim:
             claimName: assets
         
