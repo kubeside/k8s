@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adventofcode-app
+  namespace: adventofcode-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adventofcode-app
+  template:
+    metadata:
+      labels:
+        app: adventofcode-app
+    spec:
+      containers:
+        - name: adventofcode-app
+          image: ghcr.io/kubeside/images/adventofcode@sha256:d22ac7cf956bb5936a414a611dd99ffe8194dbeed0d10a4972dcbd6176052492
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: config
+              mountPath: /var/www/html/config.json
+              subPath: config.json
+              readOnly: true
+      volumes:
+        - name: config
+          configMap:
+            name: config
+            items:
+              - key: config.json
+                path: config.json
+        
+        
