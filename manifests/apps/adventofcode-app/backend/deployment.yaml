@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: adventofcode-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/kubeside/images/adventofcode-backend@sha256:9e3d6aaf599c2c7a4e14823f9204cdb066cfd4de80819e9768eb63602441fba7
+          ports:
+            - containerPort: 8000
+          volumeMounts:
+            - name: config
+              mountPath: /opt/aoc/config.json
+              subPath: config.json
+              readOnly: true
+      volumes:
+        - name: config
+          secret:
+            name: backend-config
+            items:
+              - key: config.json
+                path: config.json
+        
+        

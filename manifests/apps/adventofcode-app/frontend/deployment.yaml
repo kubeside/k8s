@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: adventofcode-app
+  name: frontend
   namespace: adventofcode-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: adventofcode-app
+      app: frontend
   template:
     metadata:
       labels:
-        app: adventofcode-app
+        app: frontend
     spec:
       containers:
-        - name: adventofcode-app
-          image: ghcr.io/kubeside/images/adventofcode@sha256:d22ac7cf956bb5936a414a611dd99ffe8194dbeed0d10a4972dcbd6176052492
+        - name: frontend
+          image: ghcr.io/kubeside/images/adventofcode@sha256:ad9f60393256d933b509db06349b897c3be04dda6b79849bfd1880d08982b1c2
           ports:
             - containerPort: 80
           volumeMounts:
@@ -26,7 +26,7 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: config
+            name: frontend-config
             items:
               - key: config.json
                 path: config.json

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+  namespace: adventofcode-app
+data:
+  config.json: |
+    {
+      "year": 2024,
+      "highlightDuration": 3600,
+      "apiBase": "/api"
+    }

@@ -11,5 +11,11 @@ spec:
     - aoc.k8s.imavgs.no
   rules:
     - backendRefs:
-        - name: adventofcode-app
+        - name: backend
+          port: 80
+      matches: 
+        - path:
+            value: "/api"
+    - backendRefs:
+        - name: frontend
           port: 80
