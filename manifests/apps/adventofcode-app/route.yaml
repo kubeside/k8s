@@ -13,6 +13,11 @@ spec:
     - backendRefs:
         - name: backend
           port: 80
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path: ReplacePrefixMatch
+            replacePrefixMatch: /api
       matches: 
         - path:
             value: "/api"
