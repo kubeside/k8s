@@ -1,7 +1,7 @@
 apiVersion: cilium.io/v2
 kind: CiliumNetworkPolicy
 metadata:
-  name: backend
+  name: backend 
   namespace: adventofcode-app
 spec:
   endpointSelector:

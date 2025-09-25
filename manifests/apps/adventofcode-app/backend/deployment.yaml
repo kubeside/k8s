@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: backend
   namespace: adventofcode-app
+  annotations:
+    secret.reloader.stakater.com/reload: backend-config
 spec:
   replicas: 1
   selector:
