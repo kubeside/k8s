@@ -16,8 +16,9 @@ spec:
       filters:
         - type: URLRewrite
           urlRewrite:
-            path: ReplacePrefixMatch
-            replacePrefixMatch: /api
+            path: 
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /api
       matches: 
         - path:
             value: "/api"
