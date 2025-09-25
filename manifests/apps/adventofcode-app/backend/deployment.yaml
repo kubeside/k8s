@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/kubeside/images/adventofcode-backend@sha256:4780fbe5deb37ca537caf232d3104bb15cb76494c5b3f633fc5e9f2dd6a03596
+          image: ghcr.io/kubeside/images/adventofcode-backend@sha256:bedf02fa02971a271a6886b658054b427c9454d40484f27ba0c5d82f779a5803
           ports:
             - containerPort: 8000
           volumeMounts:
