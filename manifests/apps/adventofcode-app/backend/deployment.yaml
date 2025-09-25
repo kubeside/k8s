@@ -25,6 +25,9 @@ spec:
               mountPath: /opt/aoc/config.json
               subPath: config.json
               readOnly: true
+            env:
+              - name: "RUST_LOG"
+                value: "DEBUG"
       volumes:
         - name: config
           secret:
