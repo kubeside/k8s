@@ -4,5 +4,4 @@ resources:
   - ./namespace.yaml
   - ./stateful-set.yaml
   - ./service.yaml
-  - ./network-policy.yaml
   - ./volume-claim.yaml
