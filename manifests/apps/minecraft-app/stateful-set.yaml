@@ -8,13 +8,13 @@ spec:
   selector:
     matchLabels:
       app: minecraft
-  securityContext:
-    fsGroup: 1000
   template:
     metadata:
       labels:
         app: minecraft
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
         - name: minecraft
           image: itzg/minecraft-server@sha256:730bebfb27fa17e0d5ed0315bf47eb50b4f90a746e199409268534b15cfbadc4
