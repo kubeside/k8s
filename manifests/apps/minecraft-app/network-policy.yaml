@@ -1,0 +1,11 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: network-policy
+  namespace: minecraft-app
+spec:
+  endpointSelector:
+    matchLabels:
+      app: minecraft-app
+  egress:
+    - {}
