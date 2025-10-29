@@ -5,7 +5,7 @@ metadata:
   namespace: minecraft-app
 spec:
   selector:
-    app: minecraft-app
+    app: minecraft
   ports:
     - protocol: TCP
       port: 25565
