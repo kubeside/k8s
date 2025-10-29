@@ -28,11 +28,11 @@ spec:
             - name: MODRINTH_PROJECTS
               value: |
                 fabric-api
-                create
                 terralith
                 towns-and-towers
                 lithium
                 no-chat-reports
+
           volumeMounts:
             - name: data
               mountPath: /data
