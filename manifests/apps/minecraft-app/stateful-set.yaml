@@ -23,15 +23,6 @@ spec:
           env:
             - name: EULA
               value: "true"
-            - name: TYPE
-              value: FABRIC
-            - name: MODRINTH_PROJECTS
-              value: |
-                fabric-api
-                terralith
-                towns-and-towers
-                lithium
-                no-chat-reports
 
           volumeMounts:
             - name: data
