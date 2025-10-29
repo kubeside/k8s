@@ -8,6 +8,8 @@ spec:
   selector:
     matchLabels:
       app: minecraft
+  securityContext:
+    fsGroup: 1000
   template:
     metadata:
       labels:
