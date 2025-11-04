@@ -30,7 +30,7 @@ spec:
             - name: GID
               value: "0"
             - name: MODRINTH_PROJECTS
-              value: "create-fabric,lithium,fabric-api,bellsandwhistles"
+              value: "create-fabric,lithium,fabric-api,bellsandwhistles,double-doors"
 
           volumeMounts:
             - name: data
