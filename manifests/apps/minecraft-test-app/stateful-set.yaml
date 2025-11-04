@@ -23,6 +23,8 @@ spec:
           env:
             - name: EULA
               value: "true"
+            - name: TYPE
+              value: "fabric"
 
           volumeMounts:
             - name: data
