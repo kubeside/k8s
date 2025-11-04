@@ -25,6 +25,10 @@ spec:
               value: "fabric"
             - name: VERSION
               value: "1.21.1"
+            - name: UID 
+              value: "0"
+            - name: GID
+              value: "0"
 
           volumeMounts:
             - name: data
