@@ -13,8 +13,6 @@ spec:
       labels:
         app: minecraft
     spec:
-      securityContext:
-        fsGroup: 1000
       containers:
         - name: minecraft
           image: itzg/minecraft-server@sha256:730bebfb27fa17e0d5ed0315bf47eb50b4f90a746e199409268534b15cfbadc4
@@ -23,6 +21,10 @@ spec:
           env:
             - name: EULA
               value: "true"
+            - name: TYPE 
+              value: "fabric"
+            - name: VERSION
+              value: "1.21.1"
 
           volumeMounts:
             - name: data
