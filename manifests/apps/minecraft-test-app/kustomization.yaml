@@ -5,4 +5,3 @@ resources:
   - ./stateful-set.yaml
   - ./service.yaml
   - ./volume-claim.yaml
-  - ./ip-pool.yaml
