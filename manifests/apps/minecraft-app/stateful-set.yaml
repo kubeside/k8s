@@ -24,11 +24,13 @@ spec:
             - name: TYPE 
               value: "fabric"
             - name: VERSION
-              value: "1.21.1"
+              value: "1.20.1"
             - name: UID 
               value: "0"
             - name: GID
               value: "0"
+            - name: MODRINTH_PROJECTS
+              value: "create-fabric,lithium,appleskin,no-chat-reports"
 
           volumeMounts:
             - name: data
