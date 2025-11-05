@@ -40,6 +40,8 @@ spec:
                 jei:9FYfyBM7
                 player-locator-plus
                 cloth-config
+            - name: MAX_MEMORY
+              value: "5G"
 
           volumeMounts:
             - name: data
