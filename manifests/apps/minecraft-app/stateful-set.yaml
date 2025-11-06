@@ -42,7 +42,7 @@ spec:
                 cloth-config
                 terralith
                 biomes-o-plenty
-                terrablender
+                terrablender:J1S3aA8i
             - name: MAX_MEMORY
               value: "5G"
 
