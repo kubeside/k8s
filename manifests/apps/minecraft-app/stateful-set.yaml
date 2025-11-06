@@ -42,6 +42,7 @@ spec:
                 cloth-config
                 terralith
                 biomesoplenty
+                terrablend
             - name: MAX_MEMORY
               value: "5G"
 
