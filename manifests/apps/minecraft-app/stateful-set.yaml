@@ -41,7 +41,7 @@ spec:
                 player-locator-plus
                 cloth-config
                 terralith
-                biomes-o-plenty
+                biomes-o-plenty:eZaag2ca
                 terrablender:J1S3aA8i
             - name: MAX_MEMORY
               value: "5G"
