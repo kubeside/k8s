@@ -41,6 +41,7 @@ spec:
                 player-locator-plus
                 cloth-config
                 terralith
+                biomesoplenty
             - name: MAX_MEMORY
               value: "5G"
 
