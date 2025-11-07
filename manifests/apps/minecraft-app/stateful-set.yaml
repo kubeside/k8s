@@ -44,6 +44,8 @@ spec:
                 biomes-o-plenty:eZaag2ca
                 terrablender:J1S3aA8i
                 glitchcore:25HLOiOl
+                enchancement
+                strawberrylib
             - name: MAX_MEMORY
               value: "5G"
 
