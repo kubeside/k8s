@@ -52,21 +52,6 @@ spec:
               
             - name: MAX_MEMORY
               value: "5G"
-          livenessProbe:
-            exec:
-              command:
-                - mc-monitor
-                - status
-              initialDelaySeconds: 10
-              periodSeconds: 10
-          startupProbe:
-            exec:
-              command:
-                - mc-monitor
-                - status
-              initialDelaySeconds: 10
-              periodSeconds: 10
-              failureThreshold: 60
 
           volumeMounts:
             - name: data
