@@ -46,6 +46,8 @@ spec:
                 glitchcore:25HLOiOl
                 enchancement:mGY2pNFa
                 tooltipfix
+                open-parties-and-claims:p5VIVxkt
+                forge-config-api-port
                 
               
             - name: MAX_MEMORY
