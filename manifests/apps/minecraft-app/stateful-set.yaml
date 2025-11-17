@@ -48,8 +48,7 @@ spec:
                 tooltipfix
                 open-parties-and-claims:p5VIVxkt
                 forge-config-api-port
-                
-              
+                tabtps
             - name: MAX_MEMORY
               value: "5G"
 
