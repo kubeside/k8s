@@ -50,6 +50,7 @@ spec:
                 forge-config-api-port
                 tabtps
                 fabricord
+                fabric-language-kotlin
             - name: MAX_MEMORY
               value: "5G"
 
