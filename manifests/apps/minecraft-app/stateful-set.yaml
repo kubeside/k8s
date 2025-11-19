@@ -49,6 +49,7 @@ spec:
                 open-parties-and-claims:p5VIVxkt
                 forge-config-api-port
                 tabtps
+                fabricord
             - name: MAX_MEMORY
               value: "5G"
 
