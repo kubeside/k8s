@@ -70,6 +70,7 @@ spec:
                 interiors
                 slice-and-dice
                 toms-storage
+                architectury-api:WbL7MStR
             - name: MAX_MEMORY
               value: "5G"
 
