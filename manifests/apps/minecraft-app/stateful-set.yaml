@@ -51,6 +51,24 @@ spec:
                 tabtps
                 fabricord
                 fabric-language-kotlin
+                create-copper-zinc
+                create-steam-n-rails
+                create-railways-navigator
+                create-man-of-many-planes
+                immersive-aircraft
+                man-of-many-planes
+                create-high-pressure
+                create-dreams-and-desires
+                create-contraption-terminals
+                numismatics
+                create-goggles
+                create-jetpack
+                netherracked
+                create-deco
+                create-mod-trims
+                copycats
+                interiors
+                slice-and-dice
             - name: MAX_MEMORY
               value: "5G"
 
