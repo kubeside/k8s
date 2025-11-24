@@ -52,7 +52,7 @@ spec:
                 fabricord
                 fabric-language-kotlin
                 create-copper-zinc
-                create-steam-n-rails
+                create-steam-n-rails:yMgmXIuq
                 create-railways-navigator:JYYwMQBw
                 create-man-of-many-planes
                 immersive-aircraft
@@ -69,6 +69,7 @@ spec:
                 copycats
                 interiors
                 slice-and-dice
+                toms_storage
             - name: MAX_MEMORY
               value: "5G"
 
