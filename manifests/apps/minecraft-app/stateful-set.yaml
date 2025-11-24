@@ -65,6 +65,8 @@ spec:
                 create-mod-trims
                 toms-storage
                 architectury-api:WbL7MStR
+                yuushya-townscape
+                yuushya-modelling
             - name: MAX_MEMORY
               value: "5G"
 
