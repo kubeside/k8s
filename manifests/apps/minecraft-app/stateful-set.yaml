@@ -69,7 +69,7 @@ spec:
                 copycats
                 interiors
                 slice-and-dice
-                toms_storage
+                toms-storage
             - name: MAX_MEMORY
               value: "5G"
 
