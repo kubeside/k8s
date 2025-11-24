@@ -58,17 +58,11 @@ spec:
                 immersive-aircraft
                 man-of-many-planes
                 create-high-pressure
-                create-dreams-and-desires:Knv9sBsR
                 create-contraption-terminals
                 numismatics
                 create-goggles
-                create-jetpack
                 netherracked
-                create-deco
                 create-mod-trims
-                copycats
-                interiors
-                slice-and-dice
                 toms-storage
                 architectury-api:WbL7MStR
             - name: MAX_MEMORY
