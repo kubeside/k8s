@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: frontend
   namespace: adventofcode-app
+  annotations:
+    configmap.reloader.stakater.com/reload: frontend-config
 spec:
   replicas: 1
   selector:
