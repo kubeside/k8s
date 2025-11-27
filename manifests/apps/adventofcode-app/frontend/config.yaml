@@ -6,7 +6,7 @@ metadata:
 data:
   config.json: |
     {
-      "year": 2024,
+      "year": 2025,
       "highlightDuration": 3600,
       "apiBase": "/api"
     }
