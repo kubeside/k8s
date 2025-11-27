@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/kubeside/images/adventofcode@sha256:224bfdf087eb925744692dea199f32428329a9d903b216b2898752c8b408cfac
+          image: ghcr.io/kubeside/images/adventofcode@sha256:3453213d981d25e25343576c3501a9fd6ff81d5dd556355a9b8fe08f121cb1fd
           ports:
             - containerPort: 80
           volumeMounts:
