@@ -28,7 +28,12 @@ data:
         {
             "type": "web",
             "source": "https://pent.no/59.74389,10.20449",
-            "duration": 7000
+            "duration": 10000
+        },
+        {
+            "type": "web",
+            "source": "https://aoc.k8s.imavgs.no",
+            "duration": 30000
         },
         {
             "type": "video",
