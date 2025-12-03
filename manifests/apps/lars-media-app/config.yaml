@@ -36,13 +36,14 @@ data:
             "duration": 30000
         },
         {
-            "type": "video",
-            "path": "static/Jernbanebroen.mp4"
-        },
-        {
             "type": "image",
             "source": "static/Vinter.jpg",
             "duration": 5000
+        },
+        {
+            "type": "web",
+            "source": "https://tavla.entur.no/EsmjKCakCorshCFoWVRm",
+            "duration": 30000
         }
       ]
     }
