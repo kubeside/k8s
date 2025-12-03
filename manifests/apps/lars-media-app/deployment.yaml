@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: lars-media-app
   namespace: lars-media-app
+  annotations:
+    configmap.reloader.stakater.com/reload: config
 spec:
   replicas: 1
   selector:
@@ -15,7 +17,7 @@ spec:
     spec:
       containers:
         - name: media-app
-          image: ghcr.io/kubeside/images/media-app:76a476949e36c718954fa536ed48863f4ca693d7
+          image: ghcr.io/kubeside/images/media-app@sha256:d0271f6ff22bdec1cf7114956b4f606b7f75fa70836d3bfdc7524c3356dc9409
           ports:
             - containerPort: 80
           volumeMounts:
