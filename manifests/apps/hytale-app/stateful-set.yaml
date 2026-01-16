@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: hytale
+  namespace: hytale-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hytale 
+  template:
+    metadata:
+      labels:
+        app: hytale 
+    spec:
+      containers:
+        - name: hytale 
+          image: eclipse-temurin:25
+          ports:
+            - containerPort: 5520
+
+          command: ["java", "-jar", "/data/HytaleServer.jar"]
+
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data
+        
