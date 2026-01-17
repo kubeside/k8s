@@ -16,7 +16,8 @@ mountOptions:
   # - uid=1001
   # - gid=1001
   # - noperm
-  - guest
+  - username=kubernetes
+  - password=kubernetes1
   - mfsymlinks
   - cache=strict
   - noserverino # required to prevent data corruption
