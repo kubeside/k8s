@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: authentication
+  namespace: storage-system
 stringData:
   username: kubernetes
   password: kubernetes1
