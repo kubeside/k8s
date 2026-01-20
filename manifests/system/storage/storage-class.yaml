@@ -7,6 +7,10 @@ metadata:
 provisioner: smb.csi.k8s.io
 parameters:
   source: //filserver.school.arpa/Kubernetes
+  csi.storage.k8s.io/provisioner-secret-name: authentication
+  csi.storage.k8s.io/provisioner-secret-namespace: storage-system
+  csi.storage.k8s.io/node-stage-secret-name: authentication
+  csi.storage.k8s.io/node-stage-secret-namespace: storage-system 
 
 volumeBindingMode: Immediate
 allowVolumeExpansion: true
@@ -16,8 +20,6 @@ mountOptions:
   # - uid=1001
   # - gid=1001
   # - noperm
-  - username=kubernetes
-  - password=kubernetes1
   - mfsymlinks
   - cache=strict
   - noserverino # required to prevent data corruption
