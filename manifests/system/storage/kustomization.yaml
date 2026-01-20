@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
   - ./authentication.yaml
-  # - ./storage-class.yaml
+  - ./storage-class.yaml
   - ./driver/rbac.yaml
   - ./driver/driver.yaml
   - ./driver/controller.yaml
