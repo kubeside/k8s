@@ -19,7 +19,7 @@ spec:
           ports:
             - containerPort: 5520
           workingDir: /data
-          command: ["java", "-jar", "server.jar", "--assets", "assets.zip"]
+          command: ["java", "-jar", "server.jar", "--assets", "assets.zip", "--boot-command", "auth login device"]
 
           volumeMounts:
             - name: data
