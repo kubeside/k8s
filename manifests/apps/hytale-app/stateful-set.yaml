@@ -18,8 +18,8 @@ spec:
           image: eclipse-temurin:25
           ports:
             - containerPort: 5520
-
-          command: ["java", "-jar", "/data/HytaleServer.jar", "--assets", "Assets.zip"]
+          workingDir: /data
+          command: ["java", "-jar", "server.jar", "--assets", "assets.zip"]
 
           volumeMounts:
             - name: data
