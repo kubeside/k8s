@@ -19,7 +19,7 @@ spec:
           ports:
             - containerPort: 5520
 
-          command: ["java", "-jar", "/data/HytaleServer.jar"]
+          command: ["java", "-jar", "/data/HytaleServer.jar", "--assets", "Assets.zip"]
 
           volumeMounts:
             - name: data
