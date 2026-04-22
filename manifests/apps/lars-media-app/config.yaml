@@ -31,11 +31,6 @@ data:
             "duration": 10000
         },
         {
-            "type": "web",
-            "source": "https://aoc.k8s.imavgs.no",
-            "duration": 30000
-        },
-        {
             "type": "image",
             "source": "static/Vinter.jpg",
             "duration": 5000
@@ -43,7 +38,7 @@ data:
         {
             "type": "web",
             "source": "https://tavla.entur.no/EsmjKCakCorshCFoWVRm",
-            "duration": 30000
+            "duration": 15000
         }
       ]
     }
