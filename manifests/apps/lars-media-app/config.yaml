@@ -12,8 +12,32 @@ data:
             "path": "static/a.mp4"
         },
         {
+            "type": "image",
+            "source": "static/Skjermbilde 2025-03-27 - 1.png",
+            "duration": 5000
+        },
+        {
+            "type": "image",
+            "source": "static//Skjermbilde 2025-03-27 - 2.png",
+            "duration": 5000
+        },
+        {
+            "type": "image",
+            "source": "static//Skjermbilde 2025-03-27 - 3.png",
+            "duration": 5000
+        },
+        {
+            "type": "image",
+            "source": "static//Skjermbilde 2025-03-27 - 4.png",
+            "duration": 5000
+        },
+        {
             "type": "video",
             "path": "static/Basket.MOV"
+        },
+        {
+            "type": "video",
+            "path": "static/Jernbanebroen.mp4"
         },
         {
             "type": "image",
