@@ -36,10 +36,6 @@ data:
             "path": "static/Basket.MOV"
         },
         {
-            "type": "video",
-            "path": "static/Jernbanebroen.mp4"
-        },
-        {
             "type": "image",
             "source": "static/Borg.png",
             "duration": 5000
