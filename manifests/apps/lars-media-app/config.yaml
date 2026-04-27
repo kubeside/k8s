@@ -51,9 +51,8 @@ data:
             "duration": 10000
         },
         {
-            "type": "image",
-            "source": "static/Vinter.jpg",
-            "duration": 5000
+            "type": "video",
+            "path": "static/Teaser.mp4"
         },
         {
             "type": "web",
