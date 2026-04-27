@@ -52,7 +52,7 @@ data:
         },
         {
             "type": "video",
-            "path": "static/Teaser.mp4"
+            "path": "static/Teaser.mov"
         },
         {
             "type": "web",
