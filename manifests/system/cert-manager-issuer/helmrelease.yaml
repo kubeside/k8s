@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager-system
+spec:
+  chart:
+    spec:
+      chart: cert-manager-webhook-domeneshop
+      sourceRef:
+        kind: HelmRepository
+        name: domeneshop
+      version: 1.0.0
+  interval: 1m0s
+  values:
+    groupName: api.domeneshop.no
