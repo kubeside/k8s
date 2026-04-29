@@ -13,7 +13,6 @@ spec:
   path: ./manifests/system
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -29,7 +28,6 @@ spec:
   path: ./manifests/apps
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -45,4 +43,3 @@ spec:
   path: ./manifests/ctf
   prune: true
   wait: true
-  timeout: 5m0s

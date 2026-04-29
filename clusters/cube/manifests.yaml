@@ -13,4 +13,3 @@ spec:
   path: ./manifests
   prune: true
   wait: true
-  timeout: 5m0s

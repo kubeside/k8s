@@ -13,7 +13,6 @@ spec:
   path: ./manifests/apps/nginx-demo-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -29,7 +28,6 @@ spec:
   path: ./manifests/apps/iso-cache-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -45,7 +43,6 @@ spec:
   path: ./manifests/apps/lars-media-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -65,7 +62,6 @@ spec:
   path: ./manifests/apps/metro-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -81,7 +77,6 @@ spec:
   path: ./manifests/apps/computater-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -97,7 +92,6 @@ spec:
   path: ./manifests/apps/info-portal-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -117,7 +111,6 @@ spec:
   path: ./manifests/apps/adventofcode-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -133,7 +126,6 @@ spec:
   path: ./manifests/apps/hytale-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -149,4 +141,3 @@ spec:
   path: ./manifests/apps/reverse-proxy-app
   prune: true
   wait: true
-  timeout: 5m0s

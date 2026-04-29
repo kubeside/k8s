@@ -14,7 +14,6 @@ spec:
   path: ./manifests/system/envoy
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -31,7 +30,6 @@ spec:
   path: ./manifests/system/gateways
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -47,7 +45,6 @@ spec:
   path: ./manifests/system/gateway-api
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -63,7 +60,6 @@ spec:
   path: ./manifests/system/cilium
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -79,7 +75,6 @@ spec:
   path: ./manifests/system/storage
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -95,7 +90,6 @@ spec:
   path: ./manifests/system/reloader
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -111,7 +105,6 @@ spec:
   path: ./manifests/system/prometheus
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -127,4 +120,3 @@ spec:
   path: ./manifests/system/victoriametrics
   prune: true
   wait: true
-  timeout: 5m0s
