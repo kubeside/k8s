@@ -15,7 +15,8 @@ spec:
   values:
     # causes helm upgrade failure
     admissionWebhooks:
-      enabled: false
+      certManager:
+        enabled: false
     vmsingle:
       spec:
         retentionPeriod: "7d"
