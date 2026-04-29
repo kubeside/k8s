@@ -1,0 +1,39 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: operator
+  namespace: victoriametrics-system
+spec:
+  chart:
+    spec:
+      chart: victoria-metrics-k8s-stack
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: victoriametrics
+  interval: 1m0s
+  values:
+    vmsingle:
+      spec:
+        retentionPeriod: "7d"
+        resources:
+          limits:
+            memory: 3Gi
+          requests:
+            memory: 256M
+        storage:
+          resources:
+            requests:
+              storage: 8Gi
+    grafana:
+      enabled: true
+      persistence:
+        enabled: true
+      route:
+        main:
+          enabled: true
+          hostnames:
+            - grafana.k8s.imavgs.no
+          parentRefs:
+            - name: http-gateway
+              namespace: gateways-system
