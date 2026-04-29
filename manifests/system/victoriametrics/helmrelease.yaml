@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: operator
-  namespace: metrics-system
+  namespace: victoriametrics-system
 spec:
   chart:
     spec:

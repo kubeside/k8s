@@ -2,7 +2,7 @@ apiVersion: operator.victoriametrics.com/v1beta1
 kind: VMPodScrape
 metadata:
   name: pod-annotations-discovery
-  namespace: metrics-system
+  namespace: victoriametrics-system
 spec:
   # use well-known kubernetes label for job
   # otherwise any discovered target will have annotations-discovery as a job
