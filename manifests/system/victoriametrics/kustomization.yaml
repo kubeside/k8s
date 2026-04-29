@@ -6,5 +6,5 @@ resources:
   - ./helmrelease.yaml
 
   # Discovery
-  #- ./discovery/podannotations.yaml
-  #- ./discovery/serviceannotations.yaml
+  - ./discovery/podannotations.yaml
+  - ./discovery/serviceannotations.yaml
