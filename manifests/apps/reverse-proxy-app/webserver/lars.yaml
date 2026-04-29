@@ -11,7 +11,7 @@ spec:
     - lars-serv.imavgs.no
   rules:
     - backendRefs:
-        - name: backend
+        - name: lars-webserver
           port: 80
 ---
 apiVersion: v1
