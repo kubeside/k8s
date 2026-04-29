@@ -1,0 +1,41 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: lars-webserver
+  namespace: reverse-proxy
+spec:
+  parentRefs:
+    - name: http-gateway
+      namespace: gateways-system
+  hostnames:
+    - lars-serv.imavgs.no
+  rules:
+    - backendRefs:
+        - name: backend
+          port: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lars-webserver
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 4280
+---
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: lars-webserver
+  labels:
+    kubernetes.io/service-name: lars-webserver
+addressType: IPv4
+ports:
+  - name: http
+    appProtocol: http
+    protocol: TCP
+    port: 4280
+endpoints:
+  - addresses:
+      - "10.0.0.124"
