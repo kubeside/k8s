@@ -28,6 +28,7 @@ spec:
     grafana:
       enabled: true
       persistence:
+        type: pvc
         enabled: true
       route:
         main:
