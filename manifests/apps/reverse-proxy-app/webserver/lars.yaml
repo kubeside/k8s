@@ -2,7 +2,7 @@ apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
   name: lars-webserver
-  namespace: reverse-proxy
+  namespace: reverse-proxy-app
 spec:
   parentRefs:
     - name: http-gateway
@@ -18,6 +18,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: lars-webserver
+  namespace: reverse-proxy-app
 spec:
   ports:
     - protocol: TCP
@@ -28,6 +29,7 @@ apiVersion: discovery.k8s.io/v1
 kind: EndpointSlice
 metadata:
   name: lars-webserver
+  namespace: reverse-proxy-app
   labels:
     kubernetes.io/service-name: lars-webserver
 addressType: IPv4
