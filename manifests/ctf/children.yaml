@@ -8,7 +8,7 @@ spec:
   ref:
     branch: master
   secretRef:
-    name: ctf
+    name: ctf-key
   url: ssh://git@github.com/kubeside/ctf
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
