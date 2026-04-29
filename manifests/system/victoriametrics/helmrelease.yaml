@@ -13,6 +13,9 @@ spec:
         name: victoriametrics
   interval: 1m0s
   values:
+    # causes helm upgrade failure
+    admissionWebhooks:
+      enabled: false
     vmsingle:
       spec:
         retentionPeriod: "7d"
