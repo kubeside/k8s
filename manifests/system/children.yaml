@@ -117,6 +117,10 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  decryption:
+    provider: sops
+    secretRef:
+      name: cluster-key
   path: ./manifests/system/victoriametrics
   prune: true
   wait: true
@@ -180,6 +184,10 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  decryption:
+    provider: sops
+    secretRef:
+      name: cluster-key
   path: ./manifests/system/postgres
   prune: true
   wait: true
