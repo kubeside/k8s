@@ -1,18 +1,3 @@
-apiVersion: gateway.networking.k8s.io/v1alpha2
-kind: UDPRoute
-metadata:
-  name: netboot-app
-  namespace: netboot-app
-spec:
-  parentRefs:
-    - name: http-gateway
-      namespace: gateways-system
-      sectionName: tftp
-  rules:
-    - backendRefs:
-        - name: netboot-app
-          port: 69
----
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:

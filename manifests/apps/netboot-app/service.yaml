@@ -11,6 +11,17 @@ spec:
       port: 69
       targetPort: 69
       name: tftp
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: netboot-http
+  namespace: netboot-app
+spec:
+  selector:
+    app: netboot-app
+  ports:
     - protocol: TCP
       port: 80
       targetPort: 80
