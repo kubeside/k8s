@@ -5,5 +5,4 @@ metadata:
   namespace: cert-manager-issuer-system
 spec:
   interval: 1m0s
-  type: oci
-  url: oci://docker.io/domeneshop
+  url: https://awigen.github.io/cert-manager-webhook-domeneshop
