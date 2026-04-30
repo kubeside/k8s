@@ -13,3 +13,13 @@ spec:
           io.kubernetes.pod.namespace: postgres-system
       - matchLabels:
           io.kubernetes.pod.namespace: victoriametrics-system
+    - toEndpoints:
+        - matchLabels:
+            io.kubernetes.pod.namespace: kube-system
+            k8s-app: kube-dns
+      toPorts:
+        - ports:
+            - port: "53"
+          rules:
+            dns:
+              - matchPattern: "*"
