@@ -9,7 +9,7 @@ spec:
       kind: HTTPRoute
       name: netboot-dash
   authorization:
-    defaultAction: deny
+    defaultAction: Deny
     rules:
       - action: Allow
         principal:
