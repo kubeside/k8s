@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netboot-app
+  namespace: netboot-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netboot-app
+  template:
+    metadata:
+      labels:
+        app: netboot-app
+    spec:
+      containers:
+        - name: netboot
+          image: ghcr.io/netbootxyz/netbooxyz@sha256:bfe21f85fcb9cc7e76b77fafcfb23c3c3ee6d06b27ef066d61ec1de04c2cca78
+          ports:
+            - name: tftp
+              containerPort: 69
+            - name: http
+              containerPort: 80
+            - name: dashboard
+              containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          startupProbe:
+            httpGet:
+              path: /
+              port: http
+            failureThreshold: 60
+            periodSeconds: 60
+
+      

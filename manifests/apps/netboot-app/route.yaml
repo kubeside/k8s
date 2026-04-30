@@ -1,0 +1,47 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: UDPRoute
+metadata:
+  name: netboot-app
+  namespace: netboot-app
+spec:
+  parentRefs:
+    - name: http-gateway
+      namespace: gateways-system
+  hostnames:
+    - netboot.k8s.imavgs.no
+  rules:
+    - backendRefs:
+        - name: netboot-app
+          port: 69
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: netboot-content
+  namespace: netboot-app
+spec:
+  parentRefs:
+    - name: http-gateway
+      namespace: gateways-system
+  hostnames:
+    - netboot-content.k8s.imavgs.no
+  rules:
+    - backendRefs:
+        - name: netboot-app
+          port: 80
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: netboot-dash
+  namespace: netboot-app
+spec:
+  parentRefs:
+    - name: http-gateway
+      namespace: gateways-system
+  hostnames:
+    - netboot-dash.k8s.imavgs.no
+  rules:
+    - backendRefs:
+        - name: netboot-app
+          port: 3000

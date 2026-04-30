@@ -26,4 +26,9 @@ spec:
         certificateRefs:
           - kind: Secret
             name: wildcard-certificate
-
+    - name: tftp
+      protocol: UDP
+      port: 69
+      allowedRoutes:
+        kinds:
+          - kind: UDPRoute

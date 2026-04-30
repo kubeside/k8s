@@ -141,3 +141,18 @@ spec:
   path: ./manifests/apps/reverse-proxy-app
   prune: true
   wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: netboot-app
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn: []
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./manifests/apps/netboot-app
+  prune: true
+  wait: true
