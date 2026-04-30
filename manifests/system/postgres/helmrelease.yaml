@@ -21,10 +21,10 @@ spec:
         kind: ImageCatalog
         name: imagecatalog
       storage:
-        storageClass: longhorn-sc
+        storageClass: smb
       roles:
         - name: grafana
           createdb: false
           login: true
           passwordSecret: 
-            name: hootparty-db-auth
+            name: grafana-db-auth
