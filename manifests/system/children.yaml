@@ -120,7 +120,7 @@ spec:
   path: ./manifests/system/victoriametrics
   prune: true
   wait: true
-  timeout: 5m0s
+  timeout: 1m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -151,7 +151,7 @@ spec:
   path: ./manifests/system/cert-manager-issuer
   prune: true
   wait: true
-  timeout: 5m0s
+  timeout: 1m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -167,4 +167,4 @@ spec:
   path: ./manifests/system/metrics-server
   prune: true
   wait: true
-  timeout: 5m0s
+  timeout: 1m0s
