@@ -7,8 +7,7 @@ spec:
   parentRefs:
     - name: http-gateway
       namespace: gateways-system
-  hostnames:
-    - netboot.k8s.imavgs.no
+      sectionName: tftp
   rules:
     - backendRefs:
         - name: netboot-app
