@@ -35,10 +35,12 @@ spec:
             requests:
               storage: 8Gi
     grafana:
-      enabled: false
-      persistence:
-        type: pvc
-        enabled: true
+      enabled: true
+      grafana.ini:
+        database:
+          type: postgres
+          host: postgres-cluster-rw.postgres-system
+          name: grafana
       route:
         main:
           enabled: true
@@ -47,3 +49,8 @@ spec:
           parentRefs:
             - name: http-gateway
               namespace: gateways-system
+  valuesFrom:
+    - kind: Secret
+      name: database
+      valuesKey: password
+      targetPath: grafana.grafana.ini.database.password
