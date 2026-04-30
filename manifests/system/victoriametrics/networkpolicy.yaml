@@ -1,0 +1,15 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: grafana
+  namespace: victoriametrics-system
+spec:
+  endpointSelector:
+    matchLabels:
+      app.kubernetes.io/name: grafana
+  egress:
+    - toEndpoints:
+      - matchLabels:
+        io.kubernetes.pod.namespace: postgres-system
+      - matchLabels:
+        io.kubernetes.pod.namespace: victoriametrics-system
