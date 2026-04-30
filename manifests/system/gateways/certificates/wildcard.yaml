@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: wildcard-certificate
-  namespace: gateway-system
+  namespace: gateways-system
 spec:
   secretName: wildcard-certificate
   issuerRef:
