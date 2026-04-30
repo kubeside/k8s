@@ -19,7 +19,7 @@ spec:
         enabled: false
     victoria-metrics-operator:
       admissionWebhooks:
-        enabed: false
+        enabled: false
         certManager:
           enabled: false
     vmsingle:
