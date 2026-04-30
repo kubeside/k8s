@@ -34,5 +34,9 @@ spec:
               port: http
             failureThreshold: 60
             periodSeconds: 60
+          env:
+            - name: TFTPD_OPTS
+              value: "--tftp-single-port"
+          
 
       
