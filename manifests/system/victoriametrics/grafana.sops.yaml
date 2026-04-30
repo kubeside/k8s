@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: grafana
+    namespace: victoriametrics-system
+stringData:
+    GF_DATABASE_PASSWORD: ENC[AES256_GCM,data:hudsFMtmZ9Ol7NaKwPdkThJqBfQEgw==,iv:UF6CFyf7zyVtxjx3c1Kd8Ag1hjydyQu+SqgHJBKtdR8=,tag:cNgEkWK2d8BjYEg2xpJmTg==,type:str]
+sops:
+    age:
+        - recipient: age15h69z4sdwl8teyzuttaldhaaadmfzmmjkvszw0ar6sdq5ryhjp3qwagxgd
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBuT0JvRHNFZ2JFM3U1VUUr
+            UktmZmZYWFhReFM3bS9hQTZTZjU0WlZ2ZFVRClJDd1BBWEExcmJWcE1WWmtCVDF0
+            TFJ3Mm03YkJpZjYrbHc4a3dlRHJlTUUKLS0tIFNldHpNdWxkSTRpVVdVLzRPZXcx
+            amhuY3ZZZjJ0K3czaFl5RDE3cVdFcnMK3MuY7TEZlcQWNseaIV39bWx1y0F8+UcM
+            fsZWCISo6sb0Zxy9NAxn58qmnfaHJpIZKta32wRWf7h6JzkHPBZwgA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2026-04-30T12:30:25Z"
+    mac: ENC[AES256_GCM,data:WOsdlurf2nbI9q65KNRV35aZ6OLGn6r4ZYhuz/sbNKFou4bB+a9v6AOwNV3aCoKOaW4DsqOs/+vQzjqPPzZqHGYeIpMzxyRN5s0yhNP5wn28ThtBKhV4cQnyZ05nEQUoS9K5zRosHmpD0ZhrvLU8qCCWmOp1jaIDISSC+Nbc7Kg=,iv:nvwzDp4T6RkQenNoJh7U1CdsIRIToyOTlZ9IgEeXoJI=,tag:OY1LaoU5lKFGcGhzA30y/A==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.11.0

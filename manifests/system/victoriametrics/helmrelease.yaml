@@ -36,6 +36,7 @@ spec:
               storage: 8Gi
     grafana:
       enabled: true
+      envFromSecret: grafana
       grafana.ini:
         database:
           type: postgres
@@ -49,8 +50,3 @@ spec:
           parentRefs:
             - name: http-gateway
               namespace: gateways-system
-  valuesFrom:
-    - kind: Secret
-      name: database
-      valuesKey: password
-      targetPath: grafana.grafana\.ini.database.password
