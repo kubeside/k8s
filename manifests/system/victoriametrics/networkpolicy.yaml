@@ -10,6 +10,6 @@ spec:
   egress:
     - toEndpoints:
       - matchLabels:
-        io.kubernetes.pod.namespace: postgres-system
+          io.kubernetes.pod.namespace: postgres-system
       - matchLabels:
-        io.kubernetes.pod.namespace: victoriametrics-system
+          io.kubernetes.pod.namespace: victoriametrics-system
