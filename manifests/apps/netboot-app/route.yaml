@@ -27,5 +27,5 @@ spec:
     - netboot-dash.k8s.imavgs.no
   rules:
     - backendRefs:
-        - name: netboot-http
+        - name: netboot-dash
           port: 3000

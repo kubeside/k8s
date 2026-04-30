@@ -6,3 +6,5 @@ resources:
   - ./service.yaml
   - ./route.yaml
   - ./ip-pool.yaml
+  - ./htpasswd.sops.yaml
+  - ./securitypolicy.yaml
