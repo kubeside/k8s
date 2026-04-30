@@ -11,7 +11,7 @@ spec:
     - netboot-content.k8s.imavgs.no
   rules:
     - backendRefs:
-        - name: netboot-app
+        - name: netboot-http
           port: 80
 ---
 apiVersion: gateway.networking.k8s.io/v1
@@ -27,5 +27,5 @@ spec:
     - netboot-dash.k8s.imavgs.no
   rules:
     - backendRefs:
-        - name: netboot-app
+        - name: netboot-http
           port: 3000
