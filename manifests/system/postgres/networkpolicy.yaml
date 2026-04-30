@@ -1,0 +1,19 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: cluster-wide-access
+  namespace: postgres-system
+spec:
+  description: "Allow ingress traffic to port 5432 and 8000 of the cluster from any pods within the Kubernetes cluster"
+  endpointSelector:
+    matchLabels:
+      cnpg.io/cluster: postgres-cluster
+  ingress:
+    - fromEntities:
+        - cluster
+      toPorts:
+        - ports:
+            - port: "5432"
+              protocol: TCP
+            - port: "8000"
+              protocol: TCP
