@@ -10,8 +10,3 @@ spec:
       name: netboot-dash
   authorization:
     defaultAction: Deny
-    rules:
-      - action: Allow
-        principal:
-          clientCIDRs:
-            - 10.0.0.0/15
