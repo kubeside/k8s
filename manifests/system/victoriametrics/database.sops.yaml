@@ -4,19 +4,19 @@ metadata:
     name: database
     namespace: victoriametrics-system
 stringData:
-    password: ENC[AES256_GCM,data:ibmgzJ/Xf9y8dIvDapOz1xd64XiBlg==,iv:yS7EBXtSa2cRuaRXUrCmUrizd17FJiVoenspo9k+hJ4=,tag:sstmYGRzW12c9GqFEhBcWw==,type:str]
+    password: ENC[AES256_GCM,data:rqjo+kGDiQ/8ZT1Umui7T3+6Nay3fQ==,iv:rVSBg7Cgf6P5RPLALGer9lgIozEa4lEaBH7VZ345f0o=,tag:syx3O6L6HSD8itRSftIIxw==,type:str]
 sops:
     age:
         - recipient: age15h69z4sdwl8teyzuttaldhaaadmfzmmjkvszw0ar6sdq5ryhjp3qwagxgd
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBQenlzZkNWczRzVkZxN2g4
-            ckduRi9Nb1hUMFVQQVYweHl2b0luNGxad1VJCno3QVBhV29FQXUrVXI4MjBlWjF3
-            TXMvcEJwSDc5MTkxNW8reEtqWmFTdGsKLS0tIFJjcCt1d043Y3NqTWpsamNvVTR5
-            czBvdmlzZXBacS9Nb2w4dGd1WkZMMTQKJBBMDt6nh44j/eejbz28tUFmCt22aW/j
-            nS43kK6CemuJaD599o6LxndByohhQaWpYXfIB3LEwLs80JTG+W5nIg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB6ampabGMwQ1JRd0ZCT0Jr
+            ZnV3RDAyWmsxUmk3c2luTWhiUkJQajNDQlZ3CitFYU9FZVMwdldUTWNlcDdLcmo3
+            QkJlOHByeHVCOGNiNStiTzF5OTBLVkkKLS0tIGwvUjlIWUFqaGFPQnlaYmkvZDVj
+            Z3UydjhCKzgrQ1RNSlZVaGIvT0o0cGMK3/QHBk6N7RItai1Xqltvf/EFQ508HgQy
+            U3Xq81bIpQ1u1hx+rThnNRoZEUidAw3IqSDYhMyJEKCUhA0SZG+xag==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2026-04-30T11:26:41Z"
-    mac: ENC[AES256_GCM,data:apwphgM/xuPGq+3oCTTptq383YjegeD9U2lIG7cSJdCJbhoZbqDVmtbSu6Yiw6TuhCVA6mQDXJNXnmeQlIOUwLu3natdESnuHXXKElA+EDSbPfLloG1NXH9CZTFIMCo3hffnE6qPGZ4dFs6QBytDJeNQ9SNEzLy3tyE8v8ZO+rU=,iv:oTf9qiYnkeRWqNUs50LUCamjsBcNP3RlpQjFmpG8YiI=,tag:WQD0f0dPi+oGBYH5yUm+8Q==,type:str]
+    lastmodified: "2026-04-30T11:32:34Z"
+    mac: ENC[AES256_GCM,data:CY+BJvYJqDzd9hsszk2hhdF5/2CEtaFkJtidbJoNWL+HIqhhMr1eTibmUZZJQzv6mObwirVn6TZ6WncLnJFt55pOY4fdkOfeEu0/6T7gU7A3vkPROezV7PMsAu4/F6ax9//IqTgzYjJjxpB3aMR/kzNQOAG7HVnvkQomvvd6QHA=,iv:ycCZcLjP9F4+HsdXi1BQ/HZlIjtCclslbILTs91kwZ4=,tag:LT5ZDG8JOdOa6UiHRnsIbA==,type:str]
     encrypted_regex: ^(data|stringData)$
     version: 3.11.0
