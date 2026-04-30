@@ -14,16 +14,16 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
-  - name: wildcard-https
-    protocol: HTTPS
-    hostname: "*.imavgs.no"
-    port: 443
-    allowedRoutes:
-      namespaces:
-        from: All
-    tls:
-      mode: Terminate
-      certificateRefs:
-        - kind: Secret
-          name: wildcard-certificate
+    - name: wildcard-https
+      protocol: HTTPS
+      hostname: "*.imavgs.no"
+      port: 443
+      allowedRoutes:
+        namespaces:
+          from: All
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: wildcard-certificate
 
