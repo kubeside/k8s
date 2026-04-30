@@ -16,7 +16,7 @@ spec:
             config:
               APITokenSecretRef:
                 key: APIToken
-                name: domeneshop-credentials
+                name: domeneshop
               APISecretSecretRef:
                 key: APISecret
-                name: domeneshop-credentials
+                name: domeneshop
