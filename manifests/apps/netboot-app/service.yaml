@@ -33,6 +33,8 @@ metadata:
   name: netboot-dash
   namespace: netboot-app
 spec:
+  selector:
+    app: netboot-app
   ports:
     - protocol: TCP
       port: 3000
