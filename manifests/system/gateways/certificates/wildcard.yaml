@@ -4,7 +4,7 @@ metadata:
   name: wildcard-certificate
   namespace: gateways-system
 spec:
-  # secretName: wildcard-certificate
+  secretName: wildcard-certificate
   issuerRef:
     name: letsencrypt 
     kind: ClusterIssuer
