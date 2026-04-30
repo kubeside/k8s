@@ -35,7 +35,7 @@ spec:
             requests:
               storage: 8Gi
     grafana:
-      enabled: true
+      enabled: false
       persistence:
         type: pvc
         enabled: true
