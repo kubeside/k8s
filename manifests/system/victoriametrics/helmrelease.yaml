@@ -17,6 +17,11 @@ spec:
     admissionWebhooks:
       certManager:
         enabled: false
+    victoria-metrics-operator:
+      admissionWebhooks:
+        enabed: false
+        certManager:
+          enabled: false
     vmsingle:
       spec:
         retentionPeriod: "7d"
