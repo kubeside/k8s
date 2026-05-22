@@ -22,6 +22,9 @@ spec:
         name: imagecatalog
       storage:
         storageClass: smb
+      monitoring:
+        enabled: true
+        enablePodMonitor: true
       roles:
         - name: grafana
           createdb: false
