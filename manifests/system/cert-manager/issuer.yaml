@@ -20,3 +20,6 @@ spec:
               APISecretSecretRef:
                 key: APISecret
                 name: domeneshop
+        selector:
+          dnsZones:
+            - "imavgs.no"
