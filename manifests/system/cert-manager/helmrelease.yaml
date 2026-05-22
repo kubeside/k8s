@@ -19,5 +19,3 @@ spec:
       apiVersion: controller.config.cert-manager.io/v1alpha1
       kind: ControllerConfiguration
       enableGatewayAPI: true
-    certManager:
-      namespace: cert-manager-system
