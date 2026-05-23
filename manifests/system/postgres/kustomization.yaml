@@ -8,5 +8,7 @@ resources:
   - ./networkpolicy.yaml
 
   - ./databases/grafana.yaml
+  - ./databases/berg.yaml
 
   - ./secrets/grafana-db-auth.sops.yaml
+  - ./secrets/berg-db-auth.sops.yaml

@@ -1,10 +1,10 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: Database
 metadata:
-  name: grafana
+  name: berg
   namespace: postgres-system
 spec:
-  name: grafana
-  owner: grafana
+  name: berg
+  owner: berg
   cluster:
     name: postgres-cluster
