@@ -17,7 +17,7 @@ allowVolumeExpansion: true
 mountOptions:
   # - dir_mode=0777
   # - file_mode=0777
-  - uid=65532
+  - uid=26
   - forceuid
   # - gid=1001
   # - noperm
