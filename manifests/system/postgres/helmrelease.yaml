@@ -21,7 +21,7 @@ spec:
         kind: ImageCatalog
         name: imagecatalog
       storage:
-        storageClass: smb
+        storageClass: postgres
       monitoring:
         enabled: true
         enablePodMonitor: true
