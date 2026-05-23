@@ -6,7 +6,6 @@ resources:
   - ./helmrepository.yaml
   - ./imagecatalog.yaml
   - ./networkpolicy.yaml
-  - ./storage-class.yaml
 
   - ./databases/grafana.yaml
 

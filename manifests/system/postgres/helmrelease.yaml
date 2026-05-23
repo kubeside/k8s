@@ -21,7 +21,7 @@ spec:
         kind: ImageCatalog
         name: imagecatalog
       storage:
-        storageClass: postgres
+        storageClass: longhorn
       roles:
         - name: grafana
           createdb: false
