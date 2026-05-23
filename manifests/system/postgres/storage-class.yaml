@@ -15,8 +15,8 @@ parameters:
 volumeBindingMode: Immediate
 allowVolumeExpansion: true
 mountOptions:
-  # - dir_mode=0777
-  # - file_mode=0777
+  - dir_mode=0700
+  - file_mode=0700
   - uid=26
   - forceuid
   # - gid=1001
