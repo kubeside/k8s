@@ -22,9 +22,6 @@ spec:
         name: imagecatalog
       storage:
         storageClass: postgres
-      monitoring:
-        enabled: true
-        enablePodMonitor: true
       roles:
         - name: grafana
           createdb: false
