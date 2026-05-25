@@ -11,4 +11,4 @@ resources:
   - ./domeneshop/helmrepository.yaml
 
   # Secrets
-  - ./secrets/domeneshop.secret.yaml
+  - ./secrets/domeneshop.sops.yaml
