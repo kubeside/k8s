@@ -5,6 +5,3 @@ resources:
   - ./helmrepository.yaml
   - ./helmrelease.yaml
   - ./issuer.yaml
-
-  - ./domeneshop/helmrepository.yaml
-  - ./domeneshop/helmrelease.yaml
