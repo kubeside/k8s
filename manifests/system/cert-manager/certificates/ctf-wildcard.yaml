@@ -7,6 +7,6 @@ spec:
   secretName: ctf-wildcard-certificate
   issuerRef:
     name: letsencrypt 
-    kind: ClusterIssuer
+    kind: Issuer
   dnsNames:
   - "*.nerd.imavgs.no"
