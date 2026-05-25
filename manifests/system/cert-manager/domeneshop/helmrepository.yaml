@@ -5,4 +5,4 @@ metadata:
   namespace: cert-manager-system
 spec:
   interval: 1m0s
-  url: https://littformyekode.github.io/cert-manager-webhook-domeneshop/charts
+  url: https://blorptopia.github.io/cert-manager-webhook-domeneshop/charts
