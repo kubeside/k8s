@@ -23,3 +23,5 @@ spec:
         selector:
           dnsZones:
             - "imavgs.no"
+            - "nerd.imavgs.no"
+            - "k8s.imavgs.no"

@@ -1,8 +1,8 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: domeneshop-issuer
-  namespace: cert-manager-domeneshop-system
+  name: domeneshop
+  namespace: cert-manager-system
 spec:
   chart:
     spec:

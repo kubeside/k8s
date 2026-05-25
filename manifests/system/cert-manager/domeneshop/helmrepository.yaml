@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: domeneshop
+  namespace: cert-manager-system
+spec:
+  interval: 1m0s
+  url: https://littformyekode.github.io/cert-manager-webhook-domeneshop/charts

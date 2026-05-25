@@ -5,3 +5,10 @@ resources:
   - ./helmrepository.yaml
   - ./helmrelease.yaml
   - ./issuer.yaml
+
+  # Domeneshop-related manifests
+  - ./domeneshop/helmrelease.yaml
+  - ./domeneshop/helmrepository.yaml
+
+  # Secrets
+  - ./secrets/domeneshop.secret.yaml
