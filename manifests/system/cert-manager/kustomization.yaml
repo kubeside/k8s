@@ -12,3 +12,7 @@ resources:
 
   # Secrets
   - ./secrets/domeneshop.sops.yaml
+
+  # Certificates
+  - ./certificates/wildcard.yaml
+  - ./certificates/ctf-wildcard.yaml
