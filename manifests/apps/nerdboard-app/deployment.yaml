@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nerdboard
+  namespace: nerdboard-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nerdboard
+  template:
+    metadata:
+      labels:
+        app: nerdboard
+    spec:
+      containers:
+        - name: nerdboard
+          image: ghcr.io/kubeside/images/nerdboard@sha256:fb664bd1d1c210d738bc2cac22b7b7bc16e08fb7f7359434883f5ca480683fba
+          ports:
+            - containerPort: 80
+

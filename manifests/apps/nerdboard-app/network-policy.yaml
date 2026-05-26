@@ -1,0 +1,16 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: network-policy
+  namespace: nerdboard-app
+spec:
+  endpointSelector:
+    matchLabels:
+      app: nerdboard
+  ingress:
+    - fromEndpoints:
+        - matchLabels:
+            app.kubernetes.io/name: envoy
+            io.kubernetes.pod.namespace: envoy-system
+  egress:
+    - {}
