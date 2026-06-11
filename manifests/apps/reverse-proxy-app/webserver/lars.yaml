@@ -25,21 +25,14 @@ spec:
       port: 4280
       targetPort: 4280
 ---
-apiVersion: discovery.k8s.io/v1
-kind: EndpointSlice
+apiVersion: v1
+kind: Endpoints
 metadata:
   name: lars-webserver
   namespace: reverse-proxy-app
-  labels:
-    kubernetes.io/service-name: lars-webserver
-addressType: IPv4
-ports:
-  - name: http
-    appProtocol: http
+subsets:
+- addresses:
+  - ip: "10.0.0.124"
+  ports:
+  - port: 4280
     protocol: TCP
-    port: 4280
-endpoints:
-  - addresses:
-      - "10.0.0.124"
-    conditions:
-      ready: true
