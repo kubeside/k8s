@@ -14,6 +14,30 @@ spec:
       allowedRoutes:
         namespaces:
           from: All
+    - name: wildcard-https
+      protocol: HTTPS
+      hostname: "*.imavgs.no"
+      port: 443
+      allowedRoutes:
+        namespaces:
+          from: All
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: wildcard-certificate
+    - name: ctf-https
+      protocol: HTTPS
+      hostname: "*.nerd.imavgs.no"
+      port: 443
+      allowedRoutes:
+        namespaces:
+          from: All
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: ctf-wildcard-certificate
     - name: tftp
       protocol: UDP
       port: 69
