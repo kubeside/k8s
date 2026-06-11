@@ -8,7 +8,7 @@ spec:
     - name: http-gateway
       namespace: gateways-system
   hostnames:
-    - lars-serv.imavgs.no
+    - lars-webserver.imavgs.no
   rules:
     - backendRefs:
         - name: lars-webserver
