@@ -25,23 +25,15 @@ spec:
       port: 4300
       targetPort: 4300
 ---
-apiVersion: discovery.k8s.io/v1
-kind: EndpointSlice
+apiVersion: v1
+kind: Endpoints
 metadata:
-  name: artists-api
+  name: pfsense
   namespace: reverse-proxy-app
-  labels:
-    kubernetes.io/service-name: artists-api
-addressType: IPv4
-ports:
-  - name: http
-    appProtocol: http
+subsets:
+- addresses:
+  - ip: "10.0.0.124"
+  ports:
+  - port: 4300
     protocol: TCP
-    port: 8100
-endpoints:
-  - addresses:
-      - "10.0.0.124"
-    conditions:
-      ready: true
-      serving: true
-      terminating: false
+
