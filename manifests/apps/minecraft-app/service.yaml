@@ -7,10 +7,12 @@ spec:
   selector:
     app: minecraft
   ports:
-    - protocol: TCP
+    - name: minecraft
+      protocol: TCP
       port: 25565
       targetPort: 25565
-    - protocol: UDP
+    - name: voicechat
+      protocol: UDP
       port: 24454
       targetPort: 24454
   type: LoadBalancer
