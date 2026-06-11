@@ -126,7 +126,6 @@ spec:
   path: ./manifests/apps/minecraft-app
   prune: true
   wait: true
-  timeout: 5m0s
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
