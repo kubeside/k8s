@@ -28,7 +28,7 @@ spec:
 apiVersion: v1
 kind: Endpoints
 metadata:
-  name: pfsense
+  name: artists-api
   namespace: reverse-proxy-app
 subsets:
 - addresses:
