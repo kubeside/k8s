@@ -42,6 +42,7 @@ spec:
           type: postgres
           host: postgres-cluster-rw.postgres-system
           name: grafana
+          user: grafana
       route:
         main:
           enabled: true
