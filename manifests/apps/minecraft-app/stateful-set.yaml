@@ -1,0 +1,304 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: minecraft
+  namespace: minecraft-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minecraft
+  template:
+    metadata:
+      labels:
+        app: minecraft
+    spec:
+      containers:
+        - name: minecraft
+          image: itzg/minecraft-server@sha256:730bebfb27fa17e0d5ed0315bf47eb50b4f90a746e199409268534b15cfbadc4
+          ports:
+            - containerPort: 25565
+          env:
+            - name: EULA
+              value: "true"
+            - name: TYPE 
+              value: "neoforge"
+            - name: VERSION
+              value: "1.21.1"
+            - name: UID 
+              value: "0"
+            - name: GID
+              value: "0"
+            - name: MODRINTH_PROJECTS
+              value: |
+                inventory-blur:qVIg25NN
+                simply-create-model-mod:TT5I7reD
+                notenoughrecipebook:8SBaRv1t
+                create-deco:qrcMVoBD
+                ntgl:AHTujnLv
+                sophisticated-core:616eWTaq
+                cgs:1w2BHZY6
+                create-simulated-additions:tP7OCy3K
+                ding:xDYKoTCG
+                prickle:EE1FHDyD
+                simple-voice-chat:6rT2RWh6
+                copycats:kecZ0sl7
+                scholar:p8et3u1j
+                amendments:8xf6Wpxs
+                create-ratatouille-fried-delights:sTm1ZEgP
+                yungs-api:ZB22DE9q
+                seamless-sleep:Lw02ZJke
+                farmers-delight:GbNuOZ4S
+                create-easy-stock-ticker:6iOmSvGp
+                configured-defaults:HJxTPhTM
+                create-live-radio:xYQcy5uG
+                create-railways-navigator:hjpv7klQ
+                connector:1i8teo7m
+                coroutil:H2YXCYUY
+                create-radars:AntNFNAx
+                create-synthetic-pressure:S3pAqL5x
+                ichunutil:OvIyyNh4
+                create-framed:1BtGyIVR
+                kotlin-for-forge:NrSebcsG
+                create-shuffle-filter:ifSwGuWK
+                create-alloyed:mhmFlajn
+                carry-on:cgZi7nC7
+                badoptimizations:S2qthD5S
+                eating-animations:D7saUVV5
+                lambdynamiclights:IQcvNDtF
+                create-new-beginnings:UfZFVKXQ
+                sodium-extra:pFmw1eci
+                yungs-better-strongholds:8U0dIfSM
+                controlling:FaNppCJJ
+                asyncparticles:kKk6Yka7
+                supplementaries:3N4gijtd
+                fast-paintings:PQ155hbf
+                terralith:IY93YaEe
+                create-renewable-netherite:qhKlkgfZ
+                create-sound-of-steam-tuning-wrench:eSBB1Bvs
+                toms-storage:x8jcBWWG
+                create-the-air-war:qRmOHGkh
+                extra-gauges:7ogQOYHA
+                kerria-opt:EJnlPzwh
+                flerovium:ROADZx1W
+                create-enchantment-industry:QclZk1u6
+                immersive-aircraft:RkWu0N4D
+                create-copper-zinc:1Z1LCW5Z
+                create-additional-logistics:soesZiME
+                axes-are-weapons:UVPAidip
+                create-bitterballen:15wUZ9Rw
+                etched:h6eJfwiW
+                create-man-of-many-planes:7nmQy8tH
+                create-aquatic-ambitions:cgOQIktB
+                smartblockplacement:OjOphpLn
+                lodestonelib:CohX6yP1
+                createfluidlogistic:JnbW4dVU
+                updating-world-icon:qEFip2XZ
+                create-drill-drain:HCsWT6mL
+                create-access-denied:g0JvLmzZ
+                create-totem-factory:jyvlokKK
+                create-rustic-structures:d0sTQvqS
+                create-more-automation:en1TN4J7
+                yungs-better-nether-fortresses:iopJiJQp
+                create-cardboarded-conveynience:DkktDPvc
+                gputape:nlerwS8N
+                emixx:sdRUQHCL
+                create-garnished:w7HZbZUe
+                farmers-delight-extended:3zUEyjxn
+                sodium:Pb3OXVqC
+                create-dreams-and-desires:bqMxf6Ua
+                dynamic-fps:T238FZpQ
+                status-effect-bars-reforged:PPVE16f7
+                quick-pack:A5J7bhL4
+                map-atlases-forge:BlD4MEYm
+                chat-heads:8oDa7chj
+                neo-bee-fix:RFt9dm5Q
+                create-blockchain:AZNYSImQ
+                biomes-o-plenty:8vIRXPpR
+                cerulean-advancements:i5PXO3P7
+                shatterbyte-lib:yVCCi6TK
+                create-pattern-schematics:VSJhIkG2
+                e4mc:rXxApWSO
+                zeta:9GjNW2Gf
+                tm-masonry:VLRueVMY
+                appleskin:uAKA6Laj
+                continuity:eXGUs5sy
+                create-steam-n-rails-1.21.1:oQKsMKfj
+                forgified-fabric-api:7nHK7hMg
+                connector-extras:dgLCqZyo
+                asynclogger:m1MBLSsh
+                create-vibrant-vaults:t17qYXjn
+                railway-evolution:rIiRE1uT
+                create-structures-overhaul:vpYjUv75
+                create-sound-of-steam:iFePoN10
+                yungs-better-ocean-monuments:yFjEcj2g
+                create-tweaked-controllers:csCe2v7f
+                create-central-kitchen:kmHFmmpV
+                structure-layout-optimizer:eTz03Gfd
+                create-design-n-decor:uQsIRky8
+                createaddition:qPr8V4G2
+                ecologics:hsEfn34V
+                emi-loot:QXkODMCT
+                fzzy-config:MAPG6cXE
+                lootr:C2tLycH2
+                resourceful-config:lSbyRD6v
+                create-renewable-egapples:1kUBuEx8
+                potion-stacks:bnlB3gWi
+                more-sounds:s0FVNDXY
+                entitytexturefeatures:YEMROAHv
+                polytone:g907ZKM2
+                yeetus-experimentus:Pp0TjcvD
+                create-remote-terminal:H4wNS4NT
+                yungs-extras:N2EpMhR7
+                bellsandwhistles:w0mifib8
+                create-aeroworks:vsT0uzkn
+                copycats+-aeronautics-weight:wsXjRa7l
+                create-integrated-farming:FlSODr7U
+                create-winery:vTUNDdDM
+                yacl:7TVdVtxF
+                quark:dGSYpGOo
+                create-renewable-brass:Nlbe2Hef
+                gml:IDRMIIb4
+                xaeros-minimap:CklXEjmp
+                slice-and-dice:tyVnEa75
+                netherracked:UI2l4FTm
+                create-train-lights:suYdvEKP
+                rpl:hZ6B2Z0x
+                c2me-neoforge:bxMrYsyE
+                create:UjX6dr61
+                distracting-trims:2KEQq349
+                fresh-animations:xN57JJts
+                dragonlib:SgbO14PV
+                immediatelyfast:PhxY0iHw
+                lithostitched:wiffJSbz
+                sable:3FMsUjO4
+                armor-statues:SGpwIu7v
+                create-big-cannons-advanced-technologies:ds01YFge
+                entity-model-features:PAYgk63v
+                xaero-train-map:mgDpAA4x
+                aileron:XDz1C9KI
+                create-more-drill-heads:CSXCxG3F
+                architectury-api:ZxYGwlk0
+                easy-anvils:fSQSKhdF
+                cut-through:5P5tLHSh
+                create-big-cannons:bsGaXKEd
+                trashslot:JRxmKPV9
+                fa-player-extension:io7wLL8n
+                another-furniture:Q29JlZfU
+                create-tfmg:uDi14nbt
+                yungs-better-dungeons:D6aZn0Em
+                create-diesel-generators:7TPYyw7R
+                create-smart-bounds:HXviiJ3I
+                create-meta-logistics:22gj5jAT
+                xaeros-world-map:XwL25au3
+                deployer:XrLW2FiE
+                cloth-config:izKINKFg
+                balm:3XiinKbh
+                mru:qYqVf5jP
+                puzzles-lib:EgWWSAhJ
+                createlazytick:Dx5cIwDo
+                create-more-packages:QHHyVreP
+                konkrete:stJDU839
+                smarter-farmers-farmers-replant:odppGdXf
+                create-cyber-goggles:HDI54Di3
+                create-connected:iUFG9osW
+                kiwi:2flHQIzv
+                create-train-parts:UwPDQjGx
+                sablecompat:Ucq7afTi
+                extended-wrenches:g0PyoRas
+                miners-delight:YUHbwbgQ
+                explosive-enhancement-forge:XVYkZnNg
+                hypertube:MsypJ6Dy
+                create-ultimate-factory:AEMRNsNS
+                create-ratatouille:Ovv4xLQg
+                not-enough-animations:ZNs9eukY
+                modernfix:VGmSpV69
+                create-more-parallel-pipes:aYrPugrv
+                create-trainutilities:CPAbSUUg
+                create-chocolate-fountain:mBNDwtat
+                ferrite-core:x7kQWVju
+                reeses-sodium-options:xAiCe6w8
+                companion:xotWY5Gs
+                txnilib:M1CyD3Uu
+                entityculling:2tOn8XA2
+                sound:kti7i9SG
+                terrablender:6e8GCrLb
+                create-structures-arise:ZFrDlvkl
+                createoplenty:k7AAVyW3
+                overbalanced:CqxebqMo
+                create-sifting:hk3kHwCT
+                glitchcore:S2TfWrZR
+                natures-compass:nFniEtJV
+                emi:5sIPA1To
+                create-guardian-beam-defense:lobV4ut5
+                grapplemod-skybound:ejlIzfJ8
+                better-advancements:FjTYILOi
+                reconnectible-chains:haHsKT7H
+                particle-effects:ewh5dAkH
+                tmrv:slJJPeMk
+                yungs-better-desert-temples:GQ9iNWkI
+                create-contraption-terminals:XrNWi3Wo
+                create-dragons-plus:lSnZyFnZ
+                create-netherite-additions:yosj4p3v
+                create-factory:8RgwHaKI
+                modelfix:X2U8ceG9
+                numismatics:guON3qvQ
+                zfastnoise:tGdbMrnn
+                resourcify:yIfzKO1A
+                create-more-package-couriers:rv1JwLWn
+                create-stones:ndmghTMU
+                searchables:iEE85X0w
+                create-threaded-trains:ry1hvo4l
+                open-parties-and-claims:b16WHzyv
+                my-nethers-delight:qBUSJw5Z
+                explorers-compass:hIJ2Ev1Q
+                mechanicals-lib:z9HvpJMU
+                create-train-perspective:dR2F5bfH
+                detail-armor-bar-reconstructed:xr7ggK3t
+                ends-delight:YxSK1qNm
+                moonlight:sqbhVahR
+                create-fast-schematic-cannon:e70DdjWe
+                netherportalfix:O09BGtgh
+                create-let-the-adventure-begin:d3YuJ3s8
+                geckolib:gFmrC8Ru
+                mouse-tweaks:9I21YYxf
+                packagerspsic:e7XZY6Md
+                escalated:kEo89EkW
+                create-aeronautics:YhZLrAFC
+                curios:yohfFbgD
+                smooth-swapping:tnvwgXE6
+                ixeris:2WCCtj5T
+                lithium:RXHf27Wv
+                chiikawa:pR8MVcFC
+                create-old-infrastructure:kNxg2jFz
+                man-of-many-planes:onE42Qs7
+                create-goggles:Co24W2FL
+                create-bits-n-bobs:XKDQlGJW
+                create-prismatic-shine:gKqw2akx
+                create-deep-dark:3tduJc4Y
+                bbrb:HZlLCOct
+                bookshelf-lib:1sdJl7J1
+                create-track-map-(unofficial-fork):EYyY9A0V
+                create-easy-structures:ECkmsrG4
+                create-rail-grinding:BmJzz9l6
+                create-trimmed:P1pdTwvn
+                interiors:gBrfZy6S
+                serene-shrubbery:rRJVLCOH
+                blocks-bogies:rUu97B0K
+                simple-netherite-horse-armor:PJ7q3Y9v
+                zume:Rh2ImJ86
+                create-stuff-additions:2RuRqjfk
+                moreculling:BvOuEhk4
+                createschematicchecker:KzTBulXV
+                sophisticated-backpacks:gCxpNA3A
+            - name: MAX_MEMORY
+              value: "5G"
+
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: data
+        
