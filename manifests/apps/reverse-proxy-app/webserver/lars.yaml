@@ -1,38 +1,39 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: lars-webserver
+  name: pfsense
   namespace: reverse-proxy-app
 spec:
   parentRefs:
     - name: http-gateway
       namespace: gateways-system
   hostnames:
-    - lars-webserver.imavgs.no
+    - pfsense.imavgs.no
   rules:
     - backendRefs:
-        - name: lars-webserver
-          port: 4280
+        - name: pfsense
+          port: 8100
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: lars-webserver
+  name: pfsense
   namespace: reverse-proxy-app
 spec:
   ports:
     - protocol: TCP
-      port: 4280
-      targetPort: 4280
+      port: 8100
+      targetPort: 8100
 ---
 apiVersion: v1
 kind: Endpoints
 metadata:
-  name: lars-webserver
+  name: pfsense
   namespace: reverse-proxy-app
 subsets:
 - addresses:
-  - ip: "10.0.0.124"
+  - ip: "10.0.0.1"
   ports:
-  - port: 4280
+  - port: 8100
     protocol: TCP
+
