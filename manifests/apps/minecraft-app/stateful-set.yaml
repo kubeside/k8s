@@ -18,6 +18,7 @@ spec:
           image: itzg/minecraft-server@sha256:730bebfb27fa17e0d5ed0315bf47eb50b4f90a746e199409268534b15cfbadc4
           ports:
             - containerPort: 25565
+            - containerPort: 24454
           env:
             - name: EULA
               value: "true"
