@@ -29,6 +29,8 @@ spec:
               value: "0"
             - name: GID
               value: "0"
+            - name: LEVEL_TYPE
+              value: "amplified"
             - name: MODRINTH_PROJECTS
               value: |
                 notenoughrecipebook:8SBaRv1t
