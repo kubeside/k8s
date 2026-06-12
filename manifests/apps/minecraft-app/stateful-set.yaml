@@ -14,7 +14,7 @@ spec:
         app: minecraft
     spec:
       nodeAffinity:
-        preferredDuringSchedulingIgnoredDuringExecution:
+        requiredDuringSchedulingIgnoredDuringExecution:
         - weight: 1
           preference:
             matchExpressions:
