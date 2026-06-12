@@ -14,6 +14,7 @@ spec:
         app: minecraft
     spec:
       nodeSelector:
+        kubernetes.io/hostname: talos-n04-lex
         nodeSelector: nodeSelector
       containers:
         - name: minecraft
