@@ -13,15 +13,8 @@ spec:
       labels:
         app: minecraft
     spec:
-      nodeAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-        - weight: 1
-          preference:
-            matchExpressions:
-            - key: kubernetes.io/hostname
-              operator: In
-              values:
-              - talos-n04-lex
+      nodeSelector:
+        nodeSelector: nodeSelector
       containers:
         - name: minecraft
           image: itzg/minecraft-server@sha256:730bebfb27fa17e0d5ed0315bf47eb50b4f90a746e199409268534b15cfbadc4
