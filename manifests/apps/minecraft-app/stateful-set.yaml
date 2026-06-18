@@ -274,7 +274,7 @@ spec:
                 yungs-extras:N2EpMhR7
                 potion-stacks:bnlB3gWi
                 create-framed:1BtGyIVR
-                immersive-aircraft:RkWu0N4D |
+                immersive-aircraft:RkWu0N4D
             - name: MAX_MEMORY
               value: "5G"
 
