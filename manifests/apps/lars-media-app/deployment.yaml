@@ -27,7 +27,7 @@ spec:
               readOnly: true
             - name: static
               mountPath: /var/www/html/static 
-              readOnly: true       
+              readOnly: false
       volumes:
         - name: config
           configMap:
