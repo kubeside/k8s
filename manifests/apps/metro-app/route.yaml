@@ -8,7 +8,7 @@ spec:
     - name: http-gateway
       namespace: gateways-system
   hostnames:
-    - metro.k8s.imavgs.no
+    - metro.imavgs.no
   rules:
     - backendRefs:
         - name: metro-app

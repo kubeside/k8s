@@ -8,7 +8,7 @@ spec:
     - name: http-gateway
       namespace: gateways-system
   hostnames:
-    - nerdboard.k8s.imavgs.no
+    - nerdboard.imavgs.no
   rules:
     - backendRefs:
         - name: nerdboard

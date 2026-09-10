@@ -47,7 +47,7 @@ spec:
         main:
           enabled: true
           hostnames:
-            - grafana.k8s.imavgs.no
+            - grafana.imavgs.no
           parentRefs:
             - name: http-gateway
               namespace: gateways-system

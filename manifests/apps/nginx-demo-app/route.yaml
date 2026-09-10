@@ -8,7 +8,7 @@ spec:
     - name: http-gateway
       namespace: gateways-system
   hostnames:
-    - nginx-demo.k8s.imavgs.no
+    - nginx-demo.imavgs.no
   rules:
     - backendRefs:
         - name: nginx-demo-app
