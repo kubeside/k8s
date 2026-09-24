@@ -7,4 +7,4 @@ resources:
   - ./route.yaml
   - ./ip-pool.yaml
   - ./htpasswd.sops.yaml
-  - ./securitypolicy.yaml
+  #- ./securitypolicy.yaml
