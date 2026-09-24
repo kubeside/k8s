@@ -104,7 +104,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  dependsOn: []
+  dependsOn: 
+    - name: victoriametrics-system
   sourceRef:
     kind: GitRepository
     name: flux-system
