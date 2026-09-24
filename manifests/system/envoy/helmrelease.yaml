@@ -5,7 +5,8 @@ metadata:
   namespace: envoy-system
 spec:
   releaseName: envoy-gateway
-  interval: 10m
+  interval: 1m
+  timeout: 1m
   targetNamespace: envoy-system
   chart:
     spec:
