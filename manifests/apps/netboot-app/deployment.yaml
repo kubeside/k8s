@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: netboot
-          image: ghcr.io/netbootxyz/netbootxyz@sha256:01f9790c197c69ad0b95d203c20a50f3cb74ded5
+          image: ghcr.io/netbootxyz/netbootxyz:01f9790c197c69ad0b95d203c20a50f3cb74ded5@sha256:077c0c09c53043416d581406618713af81d2821d083cd6f0dc431a4448e8dfbd          
           ports:
             - name: tftp
               protocol: UDP
