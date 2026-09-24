@@ -32,4 +32,4 @@ spec:
                   name: secrets
                   key: OPNSENSE_AUTH
             - name: METRO_MODULES
-              value: "opnsense.js dns.js"
+              value: "opnsense.js dns.js metro.js fetch_speed.js"
