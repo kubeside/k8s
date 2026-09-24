@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: metro-app
-          image: ghcr.io/kubeside/images/metro@sha256:f9e32fbba699a06461b0f1d0b990857b6a920fc7c184b4ab68de01806b872c9f
+          image: ghcr.io/kubeside/images/metro@sha256:3a08c97a2c8705bee30e7b7e2b7d7594b75b4160535ab0e4be2eb3d6d7229c5f
           ports:
             - containerPort: 80
           env:
