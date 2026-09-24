@@ -6,8 +6,6 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  dependsOn:
-    - name: gateways-system
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -24,6 +22,7 @@ spec:
   interval: 1m0s
   dependsOn:
     - name: cert-manager-certs-system
+    - name: envoy-system
   sourceRef:
     kind: GitRepository
     name: flux-system
