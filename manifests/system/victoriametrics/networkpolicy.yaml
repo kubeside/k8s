@@ -20,6 +20,3 @@ spec:
       toPorts:
         - ports:
             - port: "53"
-          rules:
-            dns:
-              - matchPattern: "*"
