@@ -14,21 +14,21 @@ spec:
   prune: true
   wait: true
 ---
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: iso-cache-app
-  namespace: flux-system
-spec:
-  interval: 1m0s
-  dependsOn: []
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./manifests/apps/iso-cache-app
-  prune: true
-  wait: true
----
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: iso-cache-app
+#   namespace: flux-system
+# spec:
+#   interval: 1m0s
+#   dependsOn: []
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+#   path: ./manifests/apps/iso-cache-app
+#   prune: true
+#   wait: true
+# ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
