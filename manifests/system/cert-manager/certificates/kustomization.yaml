@@ -7,6 +7,6 @@ resources:
     - ./secrets/domeneshop.sops.yaml
 
     # Certificates
-    - ./wildcard.yaml
-    - ./ctf-wildcard.yaml
+    #- ./wildcard.yaml
+    #- ./ctf-wildcard.yaml
 
