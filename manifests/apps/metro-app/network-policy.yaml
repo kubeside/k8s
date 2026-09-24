@@ -14,7 +14,7 @@ spec:
             io.kubernetes.pod.namespace: envoy-system
   egress:
     - toFQDNs:
-        - matchName: "pfsense.imavgs.no"
+        - matchName: "ditto.imavgs.no"
         - matchName: "dns.google"
         - matchName: "one.one.one.one"
       toPorts:
