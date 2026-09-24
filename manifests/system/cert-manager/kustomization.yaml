@@ -4,15 +4,7 @@ resources:
   - ./namespace.yaml
   - ./helmrepository.yaml
   - ./helmrelease.yaml
-  - ./issuer.yaml
 
   # Domeneshop-related manifests
   - ./domeneshop/helmrelease.yaml
   - ./domeneshop/helmrepository.yaml
-
-  # Secrets
-  - ./secrets/domeneshop.sops.yaml
-
-  # Certificates
-  - ./certificates/wildcard.yaml
-  - ./certificates/ctf-wildcard.yaml

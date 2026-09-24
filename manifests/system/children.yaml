@@ -118,6 +118,26 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
+  name: cert-manager-certs-system 
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn:
+    - name: cert-manager-system
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  decryption:
+    provider: sops
+    secretRef:
+      name: cluster-key
+  path: ./manifests/system/cert-manager/certificates
+  prune: true
+  wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
   name: metrics-server-system 
   namespace: flux-system
 spec:

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Kustomization
+resources:
+    # Issuers
+    - ./issuer.yaml
+    # Secrets
+    - ./secrets/domeneshop.sops.yaml
+
+    # Certificates
+    - ./wildcard.yaml
+    - ./ctf-wildcard.yaml
+
