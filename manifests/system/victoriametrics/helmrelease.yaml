@@ -47,6 +47,9 @@ spec:
         existingSecret: admin-user
         userKey: username
         passwordKey: password
+      plugins:
+        - victoriametrics-logs-datasource
+        - victoriametrics-metrics-datasource
       route:
         main:
           enabled: true
