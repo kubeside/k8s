@@ -24,6 +24,7 @@ spec:
   interval: 1m0s
   dependsOn:
     - name: gateway-api-system
+    - name: cert-manager-certs-system
   sourceRef:
     kind: GitRepository
     name: flux-system
