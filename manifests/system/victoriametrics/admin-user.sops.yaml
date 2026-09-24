@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: admin-user
+    namespace: victoriametrics-system
+stringData:
+    username: ENC[AES256_GCM,data:4bTudAw=,iv:V5foIMB2yTKw0E+Ab9kA2hg2AV+E6oMUaXM/k1wwjp8=,tag:jRIj9e4p4km+Urwf6te1BQ==,type:str]
+    password: ENC[AES256_GCM,data:SU0QQMSoBxTEGafBiEBrElnUydc=,iv:9x5xs8G9KEQ7iAO5NnxwbTsYCDcPUvZa1YKxZjsDQgM=,tag:qamEdoIRlGBO/GcT7bfUPg==,type:str]
+sops:
+    age:
+        - recipient: age15h69z4sdwl8teyzuttaldhaaadmfzmmjkvszw0ar6sdq5ryhjp3qwagxgd
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBKdWRPUkV1QWJ0R0JzZjZj
+            TjY5NFRSOVFza1FDQyswT3VoOXhhQ3VEQ0hJCjBldHlIOG5CWlg1QU4zM3d0bHhM
+            ZXVQeDdpbmttdjlvQ2ZVOFUxclBDbUUKLS0tIDVBWUlLRzQxZVp0dGpiM0lOSTFG
+            L3FWRUVqL1RzbXkwUzlOSGZuQWo0WUUK4cVlXffx0eUw6Vo1duH8Q4TDgVwjTvN7
+            2KofvJqd401JcN3T0JMN7AqfITfMZ9kDawN6mob6aIx558UlG/IiOQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2026-09-24T12:02:24Z"
+    mac: ENC[AES256_GCM,data:brxAWt88lLQA+cg42lCaX2e9kgL6D4n8Ob4mFx0YKOtcMnDWbUEnRDDRC2sawVbhOaJk0D8ViGru4BsEe6+BPrfyAW51GFH1DECujhsylZZDy4sKELUh919S9lzvhFZahuyEh7CPnFg1VD7/vOXVJdM+Hhm4da859WkOaDntrmo=,iv:Rjoo/un0QwqMID2Pn5/gN/MF+YHCL8vO+fE2cOjIlD4=,tag:oxd6P5SoRNG8n0Ag8+5ujA==,type:str]
+    encrypted_regex: ^(data|stringData)$
+    version: 3.11.0

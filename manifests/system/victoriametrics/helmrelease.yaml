@@ -36,13 +36,17 @@ spec:
               storage: 8Gi
     grafana:
       enabled: true
-      envFromSecret: grafana
+      envFromSecret: env
       grafana.ini:
         database:
           type: postgres
           host: postgres-cluster-rw.postgres-system
           name: grafana
           user: grafana
+      admin:
+        existingSecret: admin-user
+        userKey: username
+        passwordKey: password
       route:
         main:
           enabled: true
