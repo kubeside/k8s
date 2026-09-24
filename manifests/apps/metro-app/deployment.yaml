@@ -21,13 +21,15 @@ spec:
           ports:
             - containerPort: 80
           env:
-            - name: PFSENSE_API_URL
+            - name: OPNSENSE_API_URL
               valueFrom:
                 secretKeyRef:
                   name: secrets
-                  key: PFSENSE_API_URL
-            - name: PFSENSE_AUTH
+                  key: OPNSENSE_API_URL
+            - name: OPNSENSE_AUTH
               valueFrom:
                 secretKeyRef:
                   name: secrets
-                  key: PFSENSE_AUTH
+                  key: OPNSENSE_AUTH
+            - name: METRO_MODULES
+              value: "opnsense.js dns.js"
