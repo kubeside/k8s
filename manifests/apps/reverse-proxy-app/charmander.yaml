@@ -32,7 +32,7 @@ metadata:
   namespace: reverse-proxy-app
 subsets:
 - addresses:
-  - ip: "charmander.school.arpa"
+  - ip: "10.3.0.4"
   ports:
   - port: 8006
     protocol: TCP
