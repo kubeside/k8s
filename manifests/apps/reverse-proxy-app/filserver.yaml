@@ -13,7 +13,7 @@ spec:
     - backendRefs:
         - name: filserver
           port: 80
-----
+---
 apiVersion: v1
 kind: Service
 metadata:
