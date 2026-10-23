@@ -32,7 +32,7 @@ metadata:
   namespace: reverse-proxy-app
 subsets:
 - addresses:
-  - ip: "10.3.0.4"
+  - ip: "10.3.0.3"
   ports:
   - port: 8006
     protocol: TCP
