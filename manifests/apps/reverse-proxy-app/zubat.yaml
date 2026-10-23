@@ -9,10 +9,10 @@ spec:
       namespace: gateways-system
   hostnames:
     - zubat.imavgs.no
-rules:
-  - backendRefs:
-      - name: zubat
-        port: 443
+  rules:
+    - backendRefs:
+        - name: zubat
+          port: 443
 ---
 apiVersion: v1
 kind: Service
