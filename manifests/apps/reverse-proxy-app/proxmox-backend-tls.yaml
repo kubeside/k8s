@@ -1,0 +1,33 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: BackendTLSPolicy
+metadata:
+  name: charmander-tls
+  namespace: reverse-proxy-app
+spec:
+  targetRefs:
+    - group: ""
+      kind: Service
+      name: charmander
+  validation:
+    hostname: charmander.school.arpa
+    caCertificateRefs:
+      - group: ""
+        kind: ConfigMap
+        name: proxmox-ca
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: BackendTLSPolicy
+metadata:
+  name: zubat-tls
+  namespace: reverse-proxy-app
+spec:
+  targetRefs:
+    - group: ""
+      kind: Service
+      name: zubat
+  validation:
+    hostname: zubat.school.arpa
+    caCertificateRefs:
+      - group: ""
+        kind: ConfigMap
+        name: proxmox-ca
